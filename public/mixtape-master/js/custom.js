@@ -284,7 +284,7 @@ $(document).ready(function()
 			$(this).jPlayer("setMedia", {
 				title:"Better Days",
 					artist:"Bensound",
-					mp3:"files/bensound-betterdays.mp3"
+					mp3:"/mixtape-master/files/bensound-betterdays.mp3"
 			});
 		},
 		play: function() { // To avoid multiple jPlayers playing together.

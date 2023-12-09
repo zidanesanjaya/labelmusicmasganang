@@ -154,58 +154,22 @@
                             <div class="featured_album_player">
                                 <div class="featured_album_title_bar d-flex flex-row align-items-center justify-content-start">
                                     <div class="featured_album_title_container">
-                                        <div class="featured_album_artist">Maria Smith</div>
+                                        <div class="featured_album_artist">GNG Music Production</div>
                                         <div class="featured_album_title">Love is all Around</div>
                                     </div>
-                                    <div class="featured_album_link ml-auto"><a href="#">buy it on itunes</a></div>
                                 </div>
-                                <div id="jplayer_1" class="jp-jplayer"></div>
                                 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
                                     <div class="jp-type-playlist">
-                                        <div class="jp-playlist">
-                                            <ul>
-                                                <li></li>
-                                            </ul>
-                                        </div>
-                                        <div class="player_details d-flex flex-row align-items-center justify-content-start">
-                                            <div class="jp-details">
-                                                <div>playing</div>
-                                                <div class="jp-title" aria-label="title">&nbsp;</div>
-                                            </div>
-                                            <div class="jp-controls-holder ml-auto">
-                                                <button class="jp-play" tabindex="0"></button>
-                                            </div>
-                                        </div>
-                                        <div class="player_controls">
-                                            <div class="jp-gui jp-interface d-flex flex-row align-items-center justify-content-start">
-                                                <div class="jp-controls-holder time_controls d-flex flex-row align-items-center justify-content-start">
-                                                    <div>
-                                                        <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-                                                    </div>
-                                                    <div class="jp-progress">
-                                                        <div class="jp-seek-bar">
-                                                            <div class="jp-play-bar"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">&nbsp;</div>
-                                                    </div>
-                                                </div>
-                                                <div class="jp-volume-controls d-flex flex-row align-items-center justify-content-start ml-auto">
-                                                    <button class="jp-mute" tabindex="0"></button>
-                                                    <div class="jp-volume-bar">
-                                                        <div class="jp-volume-bar-value"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-no-solution">
-                                            <span>Update Required</span>
-                                            To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>
+                                        <div class="jp-playlist container">
+                                            <h4 class="container">
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda officia praesentium rerum earum eos, molestias deleniti ut asperiores nam hic enim. Earum laudantium voluptas accusamus, exercitationem maxime cum quod quos ab ipsum deserunt officiis et hic animi ipsa veritatis provident fugit perferendis laborum eius labore rem soluta! Nemo assumenda expedita dolores necessitatibus accusamus? Dolorem, ipsum neque. Dolorum magni laboriosam voluptatem quaerat labore ipsa nemo atque libero minus itaque autem, quos adipisci sunt repudiandae, laudantium recusandae esse consequatur corrupti alias dolores exercitationem cum. Dignissimos nam excepturi, amet natus corporis ex. Dolor sed eum eius recusandae tempore officiis. Quia natus beatae consequatur?
+                                            </h4>
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="featured_album_title_bar d-flex flex-row align-items-center justify-content-start">
+                                    <div class="featured_album_link ml-auto"><a href="/about">More</a></div>
+                                </div>
                             </div>
                         </div>
                     </div>
