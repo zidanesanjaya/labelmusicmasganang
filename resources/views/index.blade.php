@@ -171,42 +171,19 @@
         <div class="artist">
             <div class="container">
                 <div class="row">
-                    <!-- Artist Content -->
-                    <div class="col-lg-7 offset-lg-1">
-                        <div class="artist_content">
-                            <div class="section_title_container">
-                                <div class="section_title">
-                                    <h1>The Artist</h1>
-                                </div>
-                            </div>
-                            <div class="row artist_text">
-                                <!-- begin::disc -->
-                                <div class="col-xl-4 col-md-6">
-                                    <div class="disc">
-                                        <a href="single.html">
-                                            <div class="disc_image"><img src="/mixtape-master/images/disc_1.jpg" alt="https://unsplash.com/@tanelah"></div>
-                                            <div class="disc_container">
-                                                <div>
-                                                    <div class="disc_content_1">
-                                                        <div class="disc_title">Mixtape</div>
-                                                        <div class="disc_subtitle">Music For the People</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- end::disc -->
-                            </div>
+
+                    <!-- Artist Image -->
+                    <div class="col-lg-4 artist_image_col">
+                        <div class="artist_image">
+                            <img src="/mixtape-master/images/artist.png" alt="">
                         </div>
                     </div>
-                </div>
 
-                <div class="row">
                     <!-- Artist Content -->
                     <div class="col-lg-7 offset-lg-1">
                         <div class="artist_content">
                             <div class="section_title_container">
+                                <div class="section_subtitle">Events</div>
                                 <div class="section_title">
                                     <h1>The Artist</h1>
                                 </div>
@@ -215,7 +192,7 @@
                                 <p> In vitae nisi aliquam, scelerisque leo a, volutpat sem. Vivamus rutrum dui fermentum eros hendrerit, id lobortis leo volutpat. Maecenas sollicitudin est in libero pretium interdum. Nullam volutpat dui sem, ac congue purus luctus nec. Curabitur luctus luctus erat, sit amet facilisis quam congue quis. Quisque ornare luctus erat id dignissim. Nullam ac nunc quis ex porttitor luctus.</p>
                                 <p>Integer sed facilisis eros. In iaculis rhoncus velit in malesuada. In hac habitasse platea dictumst. Fusce erat ex, consectetur sit amet ornare suscipit, porta et erat. Donec nec nisi in nibh commodo laoreet. Mauris dapibus justo ut feugiat malesuada. Fusce ultricies ante tortor, non vestibulum est feugiat ut.</p>
                             </div>
-                            <div class="artist_sig"><img src="/mixtape-master/images/sig.png" alt=""></div>
+                            <div class="artist_sig"><img src="images/sig.png" alt=""></div>
                             <div class="single_player_container d-flex flex-column align-items-start justify-content-center">
                                 <div class="single_player">
                                     <div id="jplayer_2" class="jp-jplayer"></div>
