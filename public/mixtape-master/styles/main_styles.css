@@ -1204,11 +1204,11 @@ section
 .artist
 {
 	padding-bottom: 106px;
-	background: #000000;
 }
 .artist_content
 {
-	padding-top: 191px;
+	padding-top: 125px;
+	padding-bottom: 125px;
 }
 .artist_image
 {

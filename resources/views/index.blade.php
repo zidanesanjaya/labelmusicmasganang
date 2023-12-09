@@ -3,24 +3,14 @@
 
 <head>
     <title>Mixtape</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Mixtape template project">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/bootstrap-4.1.2/bootstrap.min.css">
-    <link href="/mixtape-master/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/plugins/OwlCarousel2-2.2.1/animate.css">
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/main_styles.css">
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/responsive.css">
+    @include('layouts.user.head')
 </head>
 
 <body>
 
     <div class="super_container">
 
-        <!-- Header -->
+        <!-- begin::Header -->
         <header class="header">
             <div class="header_content d-flex flex-row align-items-center justify-content-end">
                 <div class="logo"><a href="#">GNG Music Production</a></div>
@@ -42,9 +32,9 @@
                 </div>
             </div>
         </header>
+        <!-- end::Header -->
 
-        <!-- Menu -->
-
+        <!-- begin::menu -->
         <div class="menu">
             <div>
                 <div class="menu_overlay"></div>
@@ -61,9 +51,9 @@
                 </div>
             </div>
         </div>
+        <!-- end::menu -->
 
-        <!-- Home -->
-
+        <!-- begin::carousel artist -->
         <div class="home">
             <div class="home_slider_container">
 
@@ -121,9 +111,9 @@
                 </div>
             </div>
         </div>
+        <!-- end::carousel artist -->
 
-        <!-- Featured Album -->
-
+        <!-- begin::about us -->
         <div class="featured_album">
             <div class="background_image featured_background" style="background-image:url(/mixtape-master/images/featured.png)"></div>
             <div class="container">
@@ -131,9 +121,7 @@
                     <div class="col-lg-6 offset-lg-6">
                         <div class="section_title_container">
                             <div class="section_title">
-                                <h1>About</h1>
                             </div>
-                            <div class="section_subtitle">Us</div>
                         </div>
                     </div>
                 </div>
@@ -177,6 +165,110 @@
                 </div>
             </div>
         </div>
+        <!-- end::about us -->
+
+        <!-- begin::artist -->
+        <div class="artist">
+            <div class="container">
+                <div class="row">
+                    <!-- Artist Content -->
+                    <div class="col-lg-7 offset-lg-1">
+                        <div class="artist_content">
+                            <div class="section_title_container">
+                                <div class="section_title">
+                                    <h1>The Artist</h1>
+                                </div>
+                            </div>
+                            <div class="row artist_text">
+                                <!-- begin::disc -->
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="disc">
+                                        <a href="single.html">
+                                            <div class="disc_image"><img src="/mixtape-master/images/disc_1.jpg" alt="https://unsplash.com/@tanelah"></div>
+                                            <div class="disc_container">
+                                                <div>
+                                                    <div class="disc_content_1">
+                                                        <div class="disc_title">Mixtape</div>
+                                                        <div class="disc_subtitle">Music For the People</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- end::disc -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Artist Content -->
+                    <div class="col-lg-7 offset-lg-1">
+                        <div class="artist_content">
+                            <div class="section_title_container">
+                                <div class="section_title">
+                                    <h1>The Artist</h1>
+                                </div>
+                            </div>
+                            <div class="artist_text">
+                                <p> In vitae nisi aliquam, scelerisque leo a, volutpat sem. Vivamus rutrum dui fermentum eros hendrerit, id lobortis leo volutpat. Maecenas sollicitudin est in libero pretium interdum. Nullam volutpat dui sem, ac congue purus luctus nec. Curabitur luctus luctus erat, sit amet facilisis quam congue quis. Quisque ornare luctus erat id dignissim. Nullam ac nunc quis ex porttitor luctus.</p>
+                                <p>Integer sed facilisis eros. In iaculis rhoncus velit in malesuada. In hac habitasse platea dictumst. Fusce erat ex, consectetur sit amet ornare suscipit, porta et erat. Donec nec nisi in nibh commodo laoreet. Mauris dapibus justo ut feugiat malesuada. Fusce ultricies ante tortor, non vestibulum est feugiat ut.</p>
+                            </div>
+                            <div class="artist_sig"><img src="/mixtape-master/images/sig.png" alt=""></div>
+                            <div class="single_player_container d-flex flex-column align-items-start justify-content-center">
+                                <div class="single_player">
+                                    <div id="jplayer_2" class="jp-jplayer"></div>
+                                    <div id="jp_container_2" class="jp-audio" role="application" aria-label="media player">
+                                        <div class="jp-type-single">
+                                            <div class="player_details d-flex flex-row align-items-center justify-content-start">
+                                                <div class="jp-details">
+                                                    <div>playing</div>
+                                                    <div class="jp-title" aria-label="title">&nbsp;</div>
+                                                </div>
+                                                <div class="jp-controls-holder ml-auto">
+                                                    <button class="jp-play" tabindex="0"></button>
+                                                </div>
+                                            </div>
+                                            <div class="player_controls">
+                                                <div class="jp-gui jp-interface d-flex flex-row align-items-center justify-content-start">
+                                                    <div class="jp-controls-holder time_controls d-flex flex-row align-items-center justify-content-start">
+                                                        <div>
+                                                            <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+                                                        </div>
+                                                        <div class="jp-progress">
+                                                            <div class="jp-seek-bar">
+                                                                <div class="jp-play-bar"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="jp-duration ml-auto" role="timer" aria-label="duration">&nbsp;</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="jp-volume-controls d-flex flex-row align-items-center justify-content-start ml-auto">
+                                                        <button class="jp-mute" tabindex="0"></button>
+                                                        <div class="jp-volume-bar">
+                                                            <div class="jp-volume-bar-value"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="jp-no-solution">
+                                                <span>Update Required</span>
+                                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end::artist -->
 
         <!-- Shows -->
 
@@ -299,85 +391,6 @@
             </div>
         </div>
 
-        <!-- Artist -->
-
-        <div class="artist">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Artist Image -->
-                    <div class="col-lg-4 artist_image_col">
-                        <div class="artist_image">
-                            <img src="/mixtape-master/images/artist.png" alt="">
-                        </div>
-                    </div>
-
-                    <!-- Artist Content -->
-                    <div class="col-lg-7 offset-lg-1">
-                        <div class="artist_content">
-                            <div class="section_title_container">
-                                <div class="section_subtitle">Events</div>
-                                <div class="section_title">
-                                    <h1>The Artist</h1>
-                                </div>
-                            </div>
-                            <div class="artist_text">
-                                <p> In vitae nisi aliquam, scelerisque leo a, volutpat sem. Vivamus rutrum dui fermentum eros hendrerit, id lobortis leo volutpat. Maecenas sollicitudin est in libero pretium interdum. Nullam volutpat dui sem, ac congue purus luctus nec. Curabitur luctus luctus erat, sit amet facilisis quam congue quis. Quisque ornare luctus erat id dignissim. Nullam ac nunc quis ex porttitor luctus.</p>
-                                <p>Integer sed facilisis eros. In iaculis rhoncus velit in malesuada. In hac habitasse platea dictumst. Fusce erat ex, consectetur sit amet ornare suscipit, porta et erat. Donec nec nisi in nibh commodo laoreet. Mauris dapibus justo ut feugiat malesuada. Fusce ultricies ante tortor, non vestibulum est feugiat ut.</p>
-                            </div>
-                            <div class="artist_sig"><img src="/mixtape-master/images/sig.png" alt=""></div>
-                            <div class="single_player_container d-flex flex-column align-items-start justify-content-center">
-                                <div class="single_player">
-                                    <div id="jplayer_2" class="jp-jplayer"></div>
-                                    <div id="jp_container_2" class="jp-audio" role="application" aria-label="media player">
-                                        <div class="jp-type-single">
-                                            <div class="player_details d-flex flex-row align-items-center justify-content-start">
-                                                <div class="jp-details">
-                                                    <div>playing</div>
-                                                    <div class="jp-title" aria-label="title">&nbsp;</div>
-                                                </div>
-                                                <div class="jp-controls-holder ml-auto">
-                                                    <button class="jp-play" tabindex="0"></button>
-                                                </div>
-                                            </div>
-                                            <div class="player_controls">
-                                                <div class="jp-gui jp-interface d-flex flex-row align-items-center justify-content-start">
-                                                    <div class="jp-controls-holder time_controls d-flex flex-row align-items-center justify-content-start">
-                                                        <div>
-                                                            <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-                                                        </div>
-                                                        <div class="jp-progress">
-                                                            <div class="jp-seek-bar">
-                                                                <div class="jp-play-bar"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="jp-duration ml-auto" role="timer" aria-label="duration">&nbsp;</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="jp-volume-controls d-flex flex-row align-items-center justify-content-start ml-auto">
-                                                        <button class="jp-mute" tabindex="0"></button>
-                                                        <div class="jp-volume-bar">
-                                                            <div class="jp-volume-bar-value"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="jp-no-solution">
-                                                <span>Update Required</span>
-                                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
 
         <!-- Extra -->
 
