@@ -1,76 +1,12 @@
 @charset "utf-8";
 
-.disc a {
-    display: block;
-    position: relative;
-    overflow: hidden;
-}
-.disc a::before {
-    display: block;
-    position: absolute;
-    top: -100%;
-    left: -200%;
-    transform-origin: right center;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    background: rgba(222, 79, 50, 0.7);
-    width: 200%;
-    height: 200%;
-    z-index: 1;
-    content: "";
-    -webkit-transition: all 600ms ease;
-    -moz-transition: all 600ms ease;
-    -ms-transition: all 600ms ease;
-    -o-transition: all 600ms ease;
-    transition: all 600ms ease;
-}
-.disc:hover a::before {
-    -webkit-transform: translate(60%, 60%) rotate(45deg);
-    -moz-transform: translate(60%, 60%) rotate(45deg);
-    -ms-transform: translate(60%, 60%) rotate(45deg);
-    -o-transform: translate(60%, 60%) rotate(45deg);
-    transform: translate(60%, 60%) rotate(45deg);
+/* Begin::Custom CSS */
+
+.listArtist{
+    margin-top: 100px;
 }
 
-.disc a img {
-	width: 2000px;
-	height: width;
-}
-
-.disc_container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-}
-.disc_container > div {
-    width: 100%;
-    height: 100%;
-}
-.disc_content_1,
-.disc_content_3 {
-    position: absolute;
-    left: 48px;
-    bottom: 38px;
-}
-.disc_title {
-    font-family: "Futura_Bold", sans-serif;
-}
-.disc_content_1 .disc_title {
-    font-size: 36px;
-    color: #ffffff;
-}
-.disc_content_1 .disc_subtitle {
-    font-size: 18px;
-    line-height: 1.2;
-    margin-top: -4px;
-    color: #ffffff;
-}
+/* End::Custom CSS */
 
 /* CSS Document */
 
@@ -1035,7 +971,7 @@ section {
 *********************************/
 
 .shows {
-    padding-top: 175px;
+    padding-top: 75px;
 }
 .shows_row {
     margin-top: -55px;
@@ -1224,95 +1160,8 @@ section {
     padding-left: 50px;
     padding-right: 51px;
 }
-.newsletter_container {
-    width: 604px;
-    padding-top: 103px;
-}
-.newsletter_title {
-}
-.newsletter_form {
-    display: block;
-    position: relative;
-    width: 100%;
-    margin-top: 30px;
-}
-.newsletter_input {
-    width: 100%;
-    height: 50px;
-    background: #545454;
-    border: none;
-    outline: none;
-    padding-left: 23px;
-}
-.newsletter_input::-webkit-input-placeholder {
-    font-size: 12px !important;
-    font-style: italic;
-    color: #ffffff !important;
-}
-.newsletter_input:-moz-placeholder {
-    font-size: 12px !important;
-    font-style: italic;
-    color: #ffffff !important;
-}
-.newsletter_input::-moz-placeholder {
-    font-size: 12px !important;
-    font-style: italic;
-    color: #ffffff !important;
-}
-.newsletter_input:-ms-input-placeholder {
-    font-size: 12px !important;
-    font-style: italic;
-    color: #ffffff !important;
-}
-.newsletter_input::input-placeholder {
-    font-size: 12px !important;
-    font-style: italic;
-    color: #ffffff !important;
-}
-.newsletter_button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 139px;
-    height: 50px;
-    background: #de4f32;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 14px;
-}
-.footer_lists {
-    width: 575px;
-    padding-top: 83px;
-    padding-bottom: 5px;
-}
-.footer_list {
-    width: calc(100% / 3);
-}
-.footer_list_title {
-    font-size: 24px;
-}
-.footer_list ul {
-    margin-top: 23px;
-}
-.footer_list ul li:not(:last-of-type) {
-    margin-bottom: 9px;
-}
-.footer_list ul li a {
+.copyrightspan {
     font-size: 14px;
     color: #6d6d6d;
-}
-.footer_list ul li a:hover {
-    color: #ffffff;
-}
-.copyright_bar {
-    width: 100%;
-    height: 67px;
-    background: #000000;
-}
-.copyright_bar span {
-    font-size: 14px;
-    color: #6d6d6d;
-    line-height: 67px;
+    line-height: 20px;
 }
