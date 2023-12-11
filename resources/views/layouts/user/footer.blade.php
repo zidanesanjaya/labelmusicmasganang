@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer pt-2">
     <div class="row d-flex align-items-center justify-content-center">
         <div class="col-sm-12 text-center">
             <h3>GNG Music Production</h3>

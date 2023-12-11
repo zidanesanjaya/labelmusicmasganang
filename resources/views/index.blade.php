@@ -4,6 +4,8 @@
 <head>
     <title>Mixtape</title>
     @include('layouts.user.head')
+    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/responsive.css">
 </head>
 
 <body>
@@ -17,7 +19,7 @@
                 <nav class="main_nav">
                     <ul class="d-flex flex-row align-items-start justify-content-start">
                         <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
+                        <li><a href="/about">About us</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Artist</a></li>
                         <li><a href="#">Contact Us</a></li>
@@ -42,7 +44,7 @@
                     <nav class="menu_nav">
                         <ul class="d-flex flex-column align-items-start justify-content-start">
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">About us</a></li>
+                            <li><a href="/about">About us</a></li>
                             <li><a href="#">Services</a></li>
                             <li><a href="#">Artist</a></li>
                             <li><a href="#">Contact Us</a></li>
