@@ -11,7 +11,7 @@
 4. Menu
 5. Home
 6. Discs
-7. Artist
+7. about
 8. Milestones
 9. Footer
 
@@ -226,11 +226,11 @@ section {
 .prlx {
     height: 130% !important;
 }
-.parallax-window {
+.parallax-window-home {
     min-height: 400px;
     background: transparent;
 }
-.parallax_background {
+.parallax_background-home {
     position: absolute;
     top: 0;
     left: 0;
@@ -560,7 +560,7 @@ section {
     bottom: 89px;
 }
 .home_subtitle {
-    font-size: 18px;
+    font-size: 41px;
     line-height: 0.75;
 }
 .home_title {
@@ -741,198 +741,57 @@ section {
 }
 
 /*********************************
-7. Artist
+7. about
 *********************************/
 
-.artist {
-    padding-top: 182px;
+.about {
+    padding-top: 100px;
     padding-bottom: 134px;
 }
-.artist_text {
+.about_text {
     margin-top: 39px;
+    text-align: justify;
 }
-.artist_text p:not(:last-child) {
+.about_text p:not(:last-child) {
     margin-bottom: 30px;
 }
-.artist_sig {
-    margin-top: 51px;
-    margin-left: 26px;
-}
-.single_player_container {
-    width: calc(100% + 12px);
-    background: #ffffff;
-    left: -10px;
-    margin-top: 62px;
-}
-.single_player {
-    width: 100%;
-}
-.jp-type-single .player_details {
-    margin-top: 0;
-    padding-left: 46px;
-    padding-right: 54px;
-}
-.jp-type-single .player_controls .jp-interface {
-    padding-left: 44px;
-    padding-right: 52px;
-}
-.jp-type-single .jp-play {
-    -webkit-transform: translateY(7px);
-    -moz-transform: translateY(7px);
-    -ms-transform: translateY(7px);
-    -o-transform: translateY(7px);
-    transform: translateY(7px);
-}
-.jp-audio {
-    width: 100%;
-}
-.song_duration {
-    margin-left: auto;
-}
-.song_duration {
-    font-family: "Futura", sans-serif !important;
-    font-size: 16px !important;
-    color: rgba(255, 255, 255, 0.5) !important;
-    line-height: 38px;
-    outline: none !important;
-}
-.jp-details {
-    display: block !important;
-}
-.player_details {
-    width: 100%;
-    height: 92px;
-    background: #ffffff;
-    margin-top: 27px;
-    padding-left: 25px;
-    padding-right: 22px;
-}
-.jp-details > div {
-    font-size: 12px;
-    color: rgba(51, 50, 50, 0.5);
-    text-transform: uppercase;
-}
-.jp-details > div:first-child {
-    display: none;
-}
-.jp-state-playing .jp-details > div:first-child {
-    display: block;
-}
-.jp-type-single .jp-state-playing .jp-details .jp-title {
-    display: block;
-}
-.jp-title {
-    font-size: 16px !important;
-    color: #333232 !important;
-    text-transform: none !important;
-}
-.jp-play {
-    position: relative;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: #de4f32;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    outline: none !important;
-}
-.jp-play::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-family: "FontAwesome";
-    font-size: 20px;
-    color: #ffffff;
-    content: "\f04b";
-}
-.jp-state-playing .jp-play::after {
-    content: "\f04c";
-}
-.jp-play:active {
-    width: 46px;
-    height: 46px;
-}
-.player_controls {
-    width: 100%;
-    background: #ececec;
-}
-.player_controls .jp-interface {
-    width: 100%;
-    height: 56px;
-    padding-left: 23px;
-    padding-right: 20px;
-}
-.jp-volume-controls {
-    width: 80px;
-}
-.jp-volume-bar {
-    width: 45px;
-    height: 9px;
-    background: #989898;
-    cursor: pointer;
-}
-.jp-volume-bar-value {
-    height: 9px;
-    background: #5f5f5f;
-}
-.jp-mute {
-    position: relative;
-    width: 29px;
-    height: 16px;
+.parallax-window-about {
+    min-height: 400px;
     background: transparent;
-    border: none;
-    outline: none;
-    margin-right: 6px;
-    cursor: pointer;
 }
-.jp-state-muted .jp-mute::after {
-    content: url(../images/mute_0.png);
-}
-.jp-mute:active {
-    outline: none;
-}
-.jp-mute::after {
-    display: block;
+.parallax_background-about {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: url(../images/mute_1.png);
+    top: 100px;
+    left: 100px;
+    width: 500px;
+    height: 500px;
 }
-.time_controls {
-    width: calc(100% - 110px);
+
+/*********************************
+7.1 Detail About
+*********************************/
+
+.detailabout {
+    padding-top: 100px;
+    padding-bottom: 134px;
 }
-.jp-progress {
-    width: 100%;
-    height: 9px;
-    background: #9f9f9f;
+.detailabout_text {
+    right: 500px;
+    text-align: justify;
 }
-.jp-current-time {
-    width: 48px;
+.detailabout_text p:not(:last-child) {
+    margin-bottom: 30px;
 }
-.jp-current-time,
-.jp-duration {
-    font-size: 14px;
-    color: #333232 !important;
+.parallax-window-detailabout {
+    min-height: 400px;
+    background: transparent;
 }
-.jp-duration {
-    width: 56px;
-    text-align: right;
-}
-.jp-progress {
-    cursor: pointer;
-}
-.jp-play-bar {
-    height: 9px;
-    background: #5f5f5f;
+.parallax_background-detailabout {
+    position: absolute;
+    top: 100px;
+    left: 900px;
+    width: 500px;
+    height: 500px;
 }
 
 /*********************************
