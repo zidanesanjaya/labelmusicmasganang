@@ -12,7 +12,7 @@
 5. Home
 6. Discs
 7. about
-8. Milestones
+8. Visi dan Misi
 9. Footer
 
 
@@ -795,20 +795,15 @@ section {
 }
 
 /*********************************
-8. Milestones
+8. Visi dan Misi
 *********************************/
 
-.milestones {
-    padding-top: 108px;
+.visimisi {
     padding-left: 50px;
     padding-right: 52px;
 }
-.milestones_container {
-    padding-top: 180px;
+.visimisi_container {
     padding-bottom: 107px;
-}
-.milestone_col {
-    margin-bottom: 80px;
 }
 .milestone_icon {
     width: 48px;
