@@ -7,21 +7,21 @@
     <div class="dropdown-divider"></div>
     <div class="container d-flex justify-content-center">
         <div class="row d-flex align-items-center justify-content-center text-center w-50">
-            <div class="col-sm-4">
+            <div class="col-xl-4 col-md-4 col-sm-4 col-12">
                 <h4>
                     <a class="text-light" href="#">
                         About
                     </a>
                 </h4>
             </div>
-            <div class="col-sm-4">
+            <div class="col-xl-4 col-md-4 col-sm-4 col-12">
                 <h4>
                     <a class="text-light" href="#">
                         Services
                     </a>
                 </h4>
             </div>
-            <div class="col-sm-4">
+            <div class="col-xl-4 col-md-4 col-sm-4 col-12">
                 <h4>
                     <a class="text-light" href="#">
                         Contact
@@ -33,21 +33,21 @@
     <div class="container d-flex justify-content-center pt-2">
         <div class="dropdown-divider"></div>
         <div class="row d-flex align-items-center justify-content-center text-center">
-            <div class="col-sm-4">
+            <div class="col-xl-4 col-md-4 col-sm-4 col-4">
                 <h3>
                     <a class="text-light" href="#">
                         <i class="fa fa-whatsapp" aria-hidden="true"></i>
                     </a>
                 </h3>
             </div>
-            <div class="col-sm-4">
+            <div class="col-xl-4 col-md-4 col-sm-4 col-4">
                 <h3>
                     <a class="text-light" href="#">
                         <i class="fa fa-instagram" aria-hidden="true"></i>
                     </a>
                 </h3>
             </div>
-            <div class="col-sm-4">
+            <div class="col-xl-4 col-md-4 col-sm-4 col-4">
                 <h3>
                     <a class="text-light" href="#">
                         <i class="fa fa-facebook-square" aria-hidden="true"></i>

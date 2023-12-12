@@ -745,11 +745,25 @@ section {
 *********************************/
 
 .about {
-    padding-top: 100px;
+    padding-top: 2%;
     padding-bottom: 134px;
 }
+.about_content{
+    background-color: #ff0000;
+    left: 40%;
+    width: 60%;
+    height: 100%;
+    opacity: 0.7;
+    position: absolute;
+}
+.section_title_container{
+    padding-left: 50px;
+    padding-top: 50px;
+}
 .about_text {
+    width: 110%;
     margin-top: 39px;
+    padding-left: 10px;
     text-align: justify;
 }
 .about_text p:not(:last-child) {
@@ -761,10 +775,10 @@ section {
 }
 .parallax_background-about {
     position: absolute;
-    top: 100px;
-    left: 100px;
-    width: 500px;
-    height: 500px;
+    top: 6%;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /*********************************

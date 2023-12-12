@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Mixtape</title>
+    <title>Home || GNG Music Production</title>
     @include('layouts.user.head')
     <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/main_styles.css">
     <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/responsive.css">
