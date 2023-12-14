@@ -749,11 +749,11 @@ section {
     padding-bottom: 100px;
 }
 
-.about img{
+.about img {
     width: 200%;
     height: 200%;
 }
-.about_content{
+.about_content {
     background-color: #ff0000;
     left: 40%;
     width: 60%;
@@ -761,7 +761,12 @@ section {
     opacity: 0.7;
     position: absolute;
 }
-.section_title_container{
+.aboutcard {
+    width: 100%;
+    border: solid 1px #d3d3d3;
+    background: #333232;
+}
+.section_title_container {
     padding-left: 50px;
     padding-top: 50px;
 }
@@ -785,43 +790,22 @@ section {
     height: 100%;
 }
 
-/*********************************
-7.1 Detail About
-*********************************/
-
-.detailabout {
-    padding-top: 100px;
-    padding-bottom: 134px;
-}
-.detailabout_text {
-    right: 500px;
-    text-align: justify;
-}
-.detailabout_text p:not(:last-child) {
-    margin-bottom: 30px;
-}
-.parallax-window-detailabout {
-    min-height: 400px;
-    background: transparent;
-}
-.parallax_background-detailabout {
-    position: absolute;
-    top: 100px;
-    left: 900px;
-    width: 500px;
-    height: 500px;
-}
-
-/*********************************
-8. Visi dan Misi
-*********************************/
-
 .visimisi {
     padding-left: 50px;
     padding-right: 52px;
 }
 .visimisi_container {
     padding-bottom: 80px;
+}
+.visimisi_container .headvimi {
+    padding-bottom: 15px;
+}
+.visimisi_container .headvimi h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #de4f32;
+    border-radius: 10px;
 }
 .milestone_icon {
     width: 48px;
@@ -833,7 +817,7 @@ section {
 .milestone_content {
     padding: 10px;
 }
-.milestone_content h1{
+.milestone_content h1 {
     background-color: #de4f32;
     width: 250px;
     text-align: center;

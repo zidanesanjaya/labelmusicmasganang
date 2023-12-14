@@ -74,9 +74,9 @@
         <div class="container-fluid">
             <div class="about row d-flex align-items-center justify-content-center p-lg-5">
                 <div class="col-sm-12 col-lg-6 p-2">
-                    <div class="parallax_background-about parallax-window-about" data-parallax="scroll" data-image-src="https://picsum.photos/200" data-speed="0.8"></div>
+                    <div class="parallax_background-about parallax-window-about" data-parallax="scroll" data-image-src="/mixtape-master/images/visionandmission.jpg" data-speed="0.8"></div>
                 </div>
-                <div class="col-sm-12 col-lg-6 text-justify">
+                <div class="aboutcard col-sm-12 col-lg-6 text-justify">
                     <div class="row p-3">
                         <h1>About Us</h1>
                     </div>
@@ -95,6 +95,11 @@
         <!-- begin::visi dan misi -->
         <div class="visimisi">
             <div class="visimisi_container">
+                <div class="headvimi">
+                    <h1>
+                        Visi dan Misi
+                    </h1>
+                </div>
                 <!-- Visi -->
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col-xl-12">

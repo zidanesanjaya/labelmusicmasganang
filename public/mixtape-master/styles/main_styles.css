@@ -2,7 +2,7 @@
 
 /* Begin::Custom CSS */
 
-.listArtist{
+.listArtist {
     margin-top: 100px;
 }
 
@@ -601,9 +601,13 @@ section {
 }
 .home_title h1 {
     font-size: 82px;
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+        1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }
 .home_link {
     margin-top: 21px;
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+        1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }
 .home_link a {
     position: relative;
