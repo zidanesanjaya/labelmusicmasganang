@@ -63,20 +63,12 @@
                 <div class="parallax_background-home parallax-window-home" data-parallax="scroll" data-image-src="/mixtape-master/images/about.jpg" data-speed="0.8"></div>
                 <div class="home_container">
                     <div class="home_content text-center">
-                        <div class="home_title">About</div>
+                        <div class="home_title">Discover</div>
                         <div class="home_subtitle">us</div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- <div class="discs">
-            <div class="container">
-                <div class="row discs_row">
-
-                </div>
-            </div>
-        </div> -->
 
         <!-- begin::about -->
         <div class="container-fluid">
@@ -103,31 +95,19 @@
         <!-- begin::visi dan misi -->
         <div class="visimisi">
             <div class="visimisi_container">
-                <div class="row d-flex justify-content-center align-items-center">
-
-                    <!-- Visi -->
-                    <div class="col-xl-6 col-md-12">
-                        <div class="milestone d-flex flex-row align-items-center justify-content-center">
-                            <div class="milestone_content">
-                                <h1>
-                                    Visi
-                                </h1>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Misi -->
-                    <div class="col-xl-6 col-md-12">
-                        <div class="milestone d-flex flex-row align-items-center justify-content-center">
-                            <div class="milestone_content">
-                                <h1>
-                                    Misi
-                                </h1>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                <table class="table table-responsive d-flex align-items-center justify-content-center" style="border: solid white;">
+                    <thead>
+                        <tr>
+                            <th>
+                                <h1>Visi</h1>
+                            </th>
+                            <th>
+                                <h1>Misi</h1>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
         </div>
         <!-- end::visi dan misi -->
