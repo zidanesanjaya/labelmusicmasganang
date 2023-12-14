@@ -95,19 +95,48 @@
         <!-- begin::visi dan misi -->
         <div class="visimisi">
             <div class="visimisi_container">
-                <table class="table table-responsive d-flex align-items-center justify-content-center" style="border: solid white;">
-                    <thead>
-                        <tr>
-                            <th>
-                                <h1>Visi</h1>
-                            </th>
-                            <th>
-                                <h1>Misi</h1>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+                <!-- Visi -->
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-xl-12">
+                        <div class="milestone d-flex flex-row align-items-center justify-content-center">
+                            <div class="milestone_content">
+                                <h1>
+                                    Visi
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8">
+                        <div class="milestone d-flex flex-row align-items-center justify-content-center">
+                            <div class="milestone_content">
+                                <p class="text-justify">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi placeat pariatur earum ullam repudiandae? Maiores dolore consequatur vero, voluptates laborum mollitia dignissimos vel totam quibusdam eveniet itaque. Totam porro ipsum, tenetur quas eligendi veritatis mollitia quos dolore obcaecati, nisi vitae nemo aspernatur delectus animi voluptas iure quidem exercitationem nam? Ea?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Misi -->
+                <div class="row d-flex justify-content-center align-items-center pt-xl-5">
+                    <div class="col-xl-12">
+                        <div class="milestone d-flex flex-row align-items-center justify-content-center">
+                            <div class="milestone_content">
+                                <h1>
+                                    Misi
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8">
+                        <div class="milestone d-flex flex-row align-items-center justify-content-center">
+                            <div class="milestone_content">
+                                <p class="text-justify">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi placeat pariatur earum ullam repudiandae? Maiores dolore consequatur vero, voluptates laborum mollitia dignissimos vel totam quibusdam eveniet itaque. Totam porro ipsum, tenetur quas eligendi veritatis mollitia quos dolore obcaecati, nisi vitae nemo aspernatur delectus animi voluptas iure quidem exercitationem nam? Ea?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- end::visi dan misi -->
