@@ -746,37 +746,16 @@ section {
 
 .about {
     padding-top: 105px;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
 }
-
-.about img {
-    width: 200%;
-    height: 200%;
-}
-.about_content {
-    background-color: #ff0000;
-    left: 40%;
-    width: 60%;
-    height: 100%;
-    opacity: 0.7;
-    position: absolute;
+.detailAbout {
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 .aboutcard {
     width: 100%;
     border: solid 1px #d3d3d3;
     background: #333232;
-}
-.section_title_container {
-    padding-left: 50px;
-    padding-top: 50px;
-}
-.about_text {
-    width: 110%;
-    margin-top: 39px;
-    padding-left: 10px;
-}
-.about_text p:not(:last-child) {
-    margin-bottom: 30px;
 }
 .parallax-window-about {
     min-height: 400px;

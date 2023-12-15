@@ -20,7 +20,7 @@
                     <ul class="d-flex flex-row align-items-start justify-content-start">
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="/about">About us</a></li>
-                        <li><a href="#">Services</a></li>
+                        <li><a href="/services">Services</a></li>
                         <li><a href="#">Artist</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
@@ -45,7 +45,7 @@
                         <ul class="d-flex flex-column align-items-start justify-content-start">
                             <li><a href="#">Home</a></li>
                             <li><a href="/about">About us</a></li>
-                            <li><a href="#">Services</a></li>
+                            <li><a href="/services">Services</a></li>
                             <li><a href="#">Artist</a></li>
                             <li><a href="#">Contact Us</a></li>
                         </ul>
