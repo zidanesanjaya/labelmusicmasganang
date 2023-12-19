@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Services</title>
+    <title>Services || GNG Music Production</title>
     @include('layouts.user.head')
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/blog.css">
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/blog_responsive.css">
+    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/services.css">
+    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/services_responsive.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About us</a></li>
                         <li class="active"><a href="/services">Services</a></li>
-                        <li><a href="#">Artist</a></li>
+                        <li><a href="/artist">Artist</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </nav>
@@ -46,7 +46,7 @@
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">About us</a></li>
                             <li><a href="/services">Services</a></li>
-                            <li><a href="#">Artist</a></li>
+                            <li><a href="/artist">Artist</a></li>
                             <li><a href="#">Contact Us</a></li>
                         </ul>
                     </nav>

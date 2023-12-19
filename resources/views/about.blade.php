@@ -21,7 +21,7 @@
                         <li><a href="/">Home</a></li>
                         <li class="active"><a href="/about">About us</a></li>
                         <li><a href="/services">Services</a></li>
-                        <li><a href="#">Artist</a></li>
+                        <li><a href="/artist">Artist</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </nav>
@@ -46,7 +46,7 @@
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">About us</a></li>
                             <li><a href="/services">Services</a></li>
-                            <li><a href="#">Artist</a></li>
+                            <li><a href="/artist">Artist</a></li>
                             <li><a href="#">Contact Us</a></li>
                         </ul>
                     </nav>

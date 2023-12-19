@@ -24,3 +24,7 @@ Route::get('/about', function () {
 Route::get('/services', function () {
     return view('services');
 });
+
+Route::get('/artist', function () {
+    return view('artist');
+});
