@@ -310,12 +310,16 @@ Artist
     background-color: #ffffff;
 }
 .listartist {
-    background-color: #de4f32;
-    width: 50%;
+    width: 100%;
     height: 100%;
     border-radius: 25px;
     text-align: center;
     margin: 1px;
+}
+.artistImage{
+    width: 500px;
+    height: 500px;
+    border-radius: 25px;
 }
 
 /*********************************

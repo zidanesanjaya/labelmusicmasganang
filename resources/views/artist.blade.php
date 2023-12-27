@@ -83,18 +83,22 @@
         <!-- begin::List Artist -->
         <div class="artist">
             <div class="artist_container">
-                <div class="allArtist row d-flex align-items-center p-4 my-5">
+                <div class="allArtist row d-flex align-items-center justify-content-between p-4 my-5">
                     <div class="listartist col-sm-3 my-2">
-                        1
+                        <img class="artistImage" src="https://picsum.photos/200" alt="">
+
                     </div>
                     <div class="listartist col-sm-3 my-2">
-                        2
+                        <img class="artistImage" src="https://picsum.photos/200" alt="">
+
                     </div>
                     <div class="listartist col-sm-3 my-2">
-                        3
+                        <img class="artistImage" src="https://picsum.photos/200" alt="">
+
                     </div>
                     <div class="listartist col-sm-3 my-2">
-                        4
+                        <img class="artistImage" src="https://picsum.photos/200" alt="">
+
                     </div>
                 </div>
             </div>
