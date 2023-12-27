@@ -71,25 +71,30 @@
         </div>
 
         <!-- begin::search -->
-        <div class="search_container">
-            <form action="#" id="#" class="search_form">
-                <input type="search" class="search_input" placeholder="Search">
-            </form>
+        <div class="container">
+            <div class="search_container">
+                <form action="#" id="#" class="search_form">
+                    <input type="search" class="search_input" placeholder="Search">
+                </form>
+            </div>
         </div>
         <!-- end::search -->
 
         <!-- begin::List Artist -->
         <div class="artist">
             <div class="artist_container">
-                <div class="allArtist row d-flex align-items-center justify-content-around p-4 my-5 mx-1">
-                    <div class="listartist col-sm-4">
-                        lorem
+                <div class="allArtist row d-flex align-items-center p-4 my-5">
+                    <div class="listartist col-sm-3 my-2">
+                        1
                     </div>
-                    <div class="listartist col-sm-4">
-                        lorem
+                    <div class="listartist col-sm-3 my-2">
+                        2
                     </div>
-                    <div class="listartist col-sm-4">
-                        lorem
+                    <div class="listartist col-sm-3 my-2">
+                        3
+                    </div>
+                    <div class="listartist col-sm-3 my-2">
+                        4
                     </div>
                 </div>
             </div>

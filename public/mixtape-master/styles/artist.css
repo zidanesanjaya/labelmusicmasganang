@@ -311,8 +311,9 @@ Artist
 }
 .listartist {
     background-color: #de4f32;
+    width: 50%;
     height: 100%;
-    /* border-radius: 25px; */
+    border-radius: 25px;
     text-align: center;
     margin: 1px;
 }
@@ -321,8 +322,8 @@ Artist
 Search
 *********************************/
 .search_container {
-    width: 604px;
-    /* padding-top: 15px; */
+    width: 80%;
+    padding-left: 15px;
     margin-left: auto;
     margin-right: auto;
 }
