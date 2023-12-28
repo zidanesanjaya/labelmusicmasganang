@@ -22,7 +22,7 @@
                         <li><a href="/about">About us</a></li>
                         <li><a href="/services">Services</a></li>
                         <li class="active"><a href="/artist">Artist</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </nav>
                 <div class="hamburger ml-auto">
@@ -47,7 +47,7 @@
                             <li><a href="/about">About us</a></li>
                             <li><a href="/services">Services</a></li>
                             <li><a href="/artist">Artist</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -83,7 +83,7 @@
         <!-- begin::List Artist -->
         <div class="artist">
             <div class="artist_container">
-                <div class="allArtist row d-flex align-items-center justify-content-between p-4 my-5">
+                <div class="allArtist row d-flex align-items-center justify-content-around p-4 my-5">
                     <div class="listartist col-sm-3 my-2">
                         <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
                         <h2 class="aristName py-2">Afgan</h2>
@@ -103,10 +103,6 @@
                     <div class="listartist col-sm-3 my-2">
                         <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
                         <h2 class="aristName py-2">Afgan</h2>
-                    </div>
-                    <div class="listartist col-sm-3 my-2">
-                        <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
-                        <h2 class="aristName py-2">Armand Maulana</h2>
                     </div>
                 </div>
             </div>
