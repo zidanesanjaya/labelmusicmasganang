@@ -48,7 +48,7 @@ body
 	font-family: 'Futura', sans-serif;
 	font-size: 14px;
 	font-weight: 400;
-	background: linear-gradient(to bottom, #000000 0%, #1b1b1b 40%);
+	background: linear-gradient(to bottom, #000000 0%, #1b1b1b 40%, #000000 100%);
 	color: #FFFFFF;
 }
 div
@@ -133,7 +133,7 @@ h2{font-size: 36px;}
 h3{font-size: 24px;}
 h4{font-size: 18px;}
 h5{font-size: 14px;}
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6, span
 {
 	font-family: 'Futura', sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -288,7 +288,7 @@ section
 .home
 {
 	width: 100%;
-	height: 384px;
+	height: 350px;
 	padding-left: 51px;
 	padding-right: 52px;
 }
@@ -350,6 +350,7 @@ section
 	background: #343434;
 	border: none;
 	outline: none;
+	color: #FFFFFF;
 	padding-left: 25px;
 	border-bottom: solid 3px transparent;
 	-webkit-transition: all 200ms ease;
@@ -429,48 +430,35 @@ section
 	background: transparent;
 	color: #de4f32;
 }
-.contact_text
+.contact_maps
 {
-	margin-top: 30px;
+	margin-top: 55px;
 }
-.contact_info_list
-{
-	margin-top: 84px;
-	padding-left: 13px;
-}
-.contact_info_list ul li
-{
-	font-size: 16px;
-	color: #aaaaaa;
-}
-.contact_info_list ul li:not(:last-of-type)
-{
-	margin-bottom: 24px;
-}
-.contact_info_list ul li > div:first-child > div
-{
-	width: 96px;
-	color: #de4f32;
+.contact_maps iframe{
+	border-radius: 25px;
 }
 .social
 {
-	margin-top: 42px;
+	margin-top: 30px;
 	left: -5px;
-	padding-left: 13px;
+	padding-left: 15px;
 }
-.social ul li:not(:last-of-type)
+.social a i
 {
-	margin-right: 26px;
-}
-.social ul li a i
-{
-	font-size: 15px;
-	padding: 5px;
+	font-size: 23px;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
 	color: #de4f32;
 }
-.social ul li a i:hover
+.social a i:hover
 {
 	color: #FFFFFF;
+}
+.social a i span
+{
+	width: 500%;
+	padding-left: 15px;
 }
 
 /*********************************
