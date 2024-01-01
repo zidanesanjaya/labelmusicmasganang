@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +34,14 @@ Route::get('/artist', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/test', function () {
+    return view('dashboard.index');
+});
+
+Route::get('/login', [AuthController::class, 'login_GET'])->name('login');
+Route::get('/home', [HomeController::class, 'dashboard_GET']);
+Route::get('/manage-pages', [HomeController::class, 'pages_GET'])->name('manage.page');
+Route::post('/login', [AuthController::class, 'login_POST'])->name('login');
+
+Route::get('/logout-post', [AuthController::class, 'logout_POST']);
