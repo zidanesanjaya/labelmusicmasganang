@@ -42,6 +42,7 @@ Route::get('/test', function () {
 Route::get('/login', [AuthController::class, 'login_GET'])->name('login');
 Route::get('/home', [HomeController::class, 'dashboard_GET']);
 Route::get('/manage-pages', [HomeController::class, 'pages_GET'])->name('manage.page');
+Route::get('/datas-music', [HomeController::class, 'music_GET'])->name('datas.music');
 Route::post('/login', [AuthController::class, 'login_POST'])->name('login');
 
 Route::get('/logout-post', [AuthController::class, 'logout_POST']);

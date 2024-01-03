@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="/star-admin/css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="/star-admin/images/favicon.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconify/iconify@3.0.0/dist/iconify.min.css">
+
 </head>
 <body>
   <div class="container-scroller"> 
@@ -45,6 +47,8 @@
         {{ Session::get('success') }}
       </div>
       @endif
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       @yield('content')
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
@@ -63,6 +67,59 @@
         document.getElementById('alertNotif').style.display = 'none';
     }, 4000);
   </script>
+
+<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+
+<script>
+	ClassicEditor
+		.create( document.querySelector( '#editor' ), {
+			toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+		} )
+		.then( editor => {
+			window.editor = editor;
+		} )
+		.catch( err => {
+			console.error( err.stack );
+		} );
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@iconify/iconify@3.0.0/dist/iconify.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Ambil elemen select
+        const selectElement = document.getElementById('iconSelect');
+
+        // Container untuk menampilkan ikon yang dipilih
+        const selectedIconContainer = document.getElementById('selectedIconContainer');
+
+        // Tambahkan event listener untuk menampilkan ikon yang dipilih
+        selectElement.addEventListener('change', function () {
+            const selectedIcon = this.value;
+            
+            // Hapus konten sebelumnya
+            selectedIconContainer.innerHTML = '';
+
+            // Tambahkan ikon yang dipilih ke dalam container
+            const iconElement = document.createElement('span');
+            iconElement.className = 'iconify';
+            iconElement.setAttribute('data-icon', `mdi:${selectedIcon}`);
+            iconElement.setAttribute('data-inline', 'false');
+
+            selectedIconContainer.appendChild(iconElement);
+        });
+
+        // Tambahkan gambar ikon di dalam setiap opsi
+        const options = selectElement.getElementsByTagName('option');
+        Array.from(options).forEach(option => {
+            const iconValue = option.getAttribute('data-icon');
+            const imgElement = document.createElement('img');
+            imgElement.src = `https://cdn.jsdelivr.net/npm/@iconify/iconify@3.0.0/dist/${iconValue}.svg`;
+            imgElement.alt = iconValue;
+            imgElement.style.width = '20px'; // Sesuaikan ukuran gambar sesuai kebutuhan
+            option.insertBefore(imgElement, option.firstChild);
+        });
+    });
+</script>
   <script src="/star-admin/vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->

@@ -21,7 +21,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#charts" aria-expanded="false" aria-controls="charts">
+            <a class="nav-link" href="{{route('datas.music')}}" aria-expanded="false" aria-controls="charts">
               <i class="menu-icon mdi mdi-bookmark-music"></i>
               <span class="menu-title">Music</span>
             </a>

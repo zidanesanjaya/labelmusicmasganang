@@ -19,4 +19,7 @@ class HomeController extends Controller
     public function pages_GET(Request $request){
         return view('manage.index');
     }
+    public function music_GET(Request $request){
+        return view('datas.music.index');
+    }
 }
