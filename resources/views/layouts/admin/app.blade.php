@@ -64,23 +64,26 @@
   <!-- plugins:js -->
   <script>
     setTimeout(function() {
-        document.getElementById('alertNotif').style.display = 'none';
+        var alertNotif = document.getElementById('alertNotif');
+        if (alertNotif) {
+            alertNotif.style.display = 'none';
+        }
     }, 4000);
   </script>
 
 <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 
 <script>
-	ClassicEditor
-		.create( document.querySelector( '#editor' ), {
-			toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
-		} )
-		.then( editor => {
-			window.editor = editor;
-		} )
-		.catch( err => {
-			console.error( err.stack );
-		} );
+	 CKEDITOR.replace('editor', {
+    });
+
+    CKEDITOR.replace('editor-about', {
+    });
+    CKEDITOR.replace('editor-visi', {
+    });
+    CKEDITOR.replace('editor-misi', {
+    });
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@iconify/iconify@3.0.0/dist/iconify.min.js"></script>

@@ -1,4 +1,5 @@
 @extends('layouts.admin.app')
+
 @section('content')
 <div class="main-panel">
     <div class="content-wrapper">
@@ -20,7 +21,7 @@
                                 <a class="nav-link" id="artist-tab" data-bs-toggle="tab" href="#artist">Artist</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact">Contact Us</a>
+                                <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact-us">Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -29,8 +30,8 @@
                         @include('manage.pages.home')
                         @include('manage.pages.about')
                         @include('manage.pages.services')
-                        @include('manage.pages.artist')
                         @include('manage.pages.contact')
+                        @include('manage.pages.artist')
                     </div>
                 </div>
             </div>

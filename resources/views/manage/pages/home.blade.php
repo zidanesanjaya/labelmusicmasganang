@@ -1,4 +1,4 @@
-<div class="tab-pane bg-white active rounded" id="home">
+<div class="tab-pane bg-white rounded" id="home">
     <div class="row p-3">
         <div class="col-lg-7 mt-4">
             <h4 class="mb-3">Deskripsi</h4>
@@ -80,16 +80,3 @@
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script>
-    $(document).ready(function () {
-        CKEDITOR.replace('editor');
-
-        $('#submitBtn').on('click', function () {
-            var editorContent = CKEDITOR.instances.editor.getData();
-
-            console.log(editorContent);
-        });
-    });
-</script>
