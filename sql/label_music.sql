@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 04, 2024 at 12:52 PM
+-- Generation Time: Jan 07, 2024 at 01:42 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -30,13 +30,35 @@ SET time_zone = "+00:00";
 CREATE TABLE `information` (
   `id` int NOT NULL,
   `title` varchar(255) NOT NULL,
-  `text` text NOT NULL,
-  `var1` text NOT NULL,
-  `var2` text NOT NULL,
-  `var3` text NOT NULL,
-  `created_at` timestamp NOT NULL,
+  `text` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `var1` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `var2` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `var3` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `is_show` int NOT NULL DEFAULT '0',
+  `type` varchar(50) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `information`
+--
+
+INSERT INTO `information` (`id`, `title`, `text`, `var1`, `var2`, `var3`, `is_show`, `type`, `created_at`, `updated_at`) VALUES
+(2, 'Instagram', NULL, 'mdi mdi-instagram fa-2x', NULL, NULL, 1, 'social_media', '2024-01-07 08:12:33', '2024-01-07 07:01:09'),
+(3, 'Facebook', NULL, 'mdi mdi-facebook fa-2x', NULL, NULL, 1, 'social_media', '2024-01-07 08:12:33', '2024-01-07 07:13:42'),
+(4, 'Whatsapp', NULL, 'mdi mdi-whatsapp fa-2x', NULL, NULL, 1, 'social_media', '2024-01-07 08:12:33', '2024-01-07 07:32:45'),
+(9, 'Linkedln', NULL, 'mdi mdi-linkedin fa-2x', NULL, NULL, 0, 'social_media', '2024-01-07 08:12:24', '2024-01-07 08:09:09'),
+(25, 'Not Found', 'notfound.png', '0', NULL, NULL, 0, 'artist', '2024-01-07 13:17:34', '2024-01-07 11:10:01'),
+(33, 'about', '<p>Ini About&nbsp; haha</p>', NULL, NULL, NULL, 1, 'about', '2024-01-07 11:43:29', '2024-01-07 11:25:54'),
+(34, 'visi', '<p>Ini Visi</p>', NULL, NULL, NULL, 1, 'about', '2024-01-07 11:35:35', '2024-01-07 11:26:00'),
+(35, 'misi', '<p>Ini Misi</p>', NULL, NULL, NULL, 1, 'about', '2024-01-07 11:35:35', '2024-01-07 11:26:05'),
+(36, 'jumbotron1', 'IO0mQBuLm81DA5AEtUDg5ozwhQwhmaWtbH8IqUUr.png', NULL, NULL, NULL, 1, 'home', '2024-01-07 12:05:29', '2024-01-07 12:00:44'),
+(37, 'jumbotron2', '9fUhPPAtDlBClneurELlxN2UGM4X9H9W5w7MmiuL.png', NULL, NULL, NULL, 1, 'home', '2024-01-07 12:05:29', '2024-01-07 12:00:54'),
+(38, 'jumbotron3', 'rYwMhq2IR9RxiwwQdmXlyH7RSFgj6lUlN0TJBUOx.png', NULL, NULL, NULL, 1, 'home', '2024-01-07 12:05:29', '2024-01-07 12:01:05'),
+(40, 'Ariel', 'CZOGDaus9cy2DZfpZSWFPr3BOnT7DxpgYDAHeuFq.jpg', '1', NULL, NULL, 1, 'artist', '2024-01-07 13:22:27', '2024-01-07 12:18:37'),
+(41, 'Rossa', '2UDcIINMXTpSDTnmGMPnEXFrqXomWBbhlaW24rPw.jpg', '1', NULL, NULL, 1, 'artist', '2024-01-07 13:22:27', '2024-01-07 12:18:46'),
+(42, 'Billie', '66Rr7YkOHgm1eUXN63nI0Y5fL7Zo64zTkOy2GBjI.jpg', '1', NULL, NULL, 1, 'artist', '2024-01-07 13:22:27', '2024-01-07 13:08:10');
 
 -- --------------------------------------------------------
 
@@ -127,7 +149,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `information`
 --
 ALTER TABLE `information`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `music`

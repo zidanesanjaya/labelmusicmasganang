@@ -32,7 +32,7 @@
                         <td>Lagu 1</td>
                         <td>
                             <audio controls class="audio-player">
-                                <source src="your-audio-file1.mp3" type="audio/mp3">
+                                <source src="/star-admin/metallica.mp3" type="audio/mp3">
                                 Your browser does not support the audio tag.
                             </audio>
                         </td>

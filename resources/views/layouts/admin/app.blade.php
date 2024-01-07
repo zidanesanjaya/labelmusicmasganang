@@ -24,6 +24,9 @@
   <link rel="shortcut icon" href="/star-admin/images/favicon.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconify/iconify@3.0.0/dist/iconify.min.css">
 
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
 </head>
 <body>
   <div class="container-scroller"> 
@@ -74,8 +77,8 @@
 <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 
 <script>
-	 CKEDITOR.replace('editor', {
-    });
+	//  CKEDITOR.replace('editor', {
+  //   });
 
     CKEDITOR.replace('editor-about', {
     });
@@ -122,7 +125,10 @@
             option.insertBefore(imgElement, option.firstChild);
         });
     });
+
+    
 </script>
+
   <script src="/star-admin/vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->

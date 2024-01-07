@@ -1,4 +1,4 @@
-<div class="tab-pane active bg-white p-4" id="services">
+<div class="tab-pane bg-white p-4" id="services">
     <div class="row p-3">
         <div class="col-lg-12">
             <h4 class="mb-3">Artist Management</h4>
