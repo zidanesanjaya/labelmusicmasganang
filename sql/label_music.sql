@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 07, 2024 at 01:42 PM
+-- Generation Time: Jan 08, 2024 at 01:01 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -58,7 +58,12 @@ INSERT INTO `information` (`id`, `title`, `text`, `var1`, `var2`, `var3`, `is_sh
 (38, 'jumbotron3', 'rYwMhq2IR9RxiwwQdmXlyH7RSFgj6lUlN0TJBUOx.png', NULL, NULL, NULL, 1, 'home', '2024-01-07 12:05:29', '2024-01-07 12:01:05'),
 (40, 'Ariel', 'CZOGDaus9cy2DZfpZSWFPr3BOnT7DxpgYDAHeuFq.jpg', '1', NULL, NULL, 1, 'artist', '2024-01-07 13:22:27', '2024-01-07 12:18:37'),
 (41, 'Rossa', '2UDcIINMXTpSDTnmGMPnEXFrqXomWBbhlaW24rPw.jpg', '1', NULL, NULL, 1, 'artist', '2024-01-07 13:22:27', '2024-01-07 12:18:46'),
-(42, 'Billie', '66Rr7YkOHgm1eUXN63nI0Y5fL7Zo64zTkOy2GBjI.jpg', '1', NULL, NULL, 1, 'artist', '2024-01-07 13:22:27', '2024-01-07 13:08:10');
+(42, 'Billie', '66Rr7YkOHgm1eUXN63nI0Y5fL7Zo64zTkOy2GBjI.jpg', '1', NULL, NULL, 1, 'artist', '2024-01-07 13:22:27', '2024-01-07 13:08:10'),
+(44, 'artist_management', '<p>fsddsg gdfg</p>', NULL, NULL, NULL, 1, 'services', '2024-01-08 12:21:33', '2024-01-08 12:11:34'),
+(45, 'music_publishing', '<p>2222</p>', NULL, NULL, NULL, 1, 'services', '2024-01-08 12:21:57', '2024-01-08 12:12:10'),
+(46, 'content_provider', '<p>33333</p>', NULL, NULL, NULL, 1, 'services', '2024-01-08 12:21:57', '2024-01-08 12:12:21'),
+(47, 'digital_distribution', '<p>4444</p>', NULL, NULL, NULL, 1, 'services', '2024-01-08 12:21:57', '2024-01-08 12:12:31'),
+(48, 'brand_extension', '<p>5555</p>', NULL, NULL, NULL, 1, 'services', '2024-01-08 12:21:57', '2024-01-08 12:12:45');
 
 -- --------------------------------------------------------
 
@@ -70,7 +75,7 @@ CREATE TABLE `music` (
   `id` int NOT NULL,
   `title` varchar(255) NOT NULL,
   `file` text NOT NULL,
-  `created_at` timestamp NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -149,13 +154,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `information`
 --
 ALTER TABLE `information`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `music`
 --
 ALTER TABLE `music`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `services`

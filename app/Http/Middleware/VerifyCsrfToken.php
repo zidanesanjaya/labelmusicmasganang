@@ -18,5 +18,6 @@ class VerifyCsrfToken extends Middleware
         'delete-artist',
         'post-about',
         'post-home',
+        'post-services',
     ];
 }

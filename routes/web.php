@@ -62,3 +62,10 @@ Route::post('/post-home', [HomeController::class, 'home_POST'])->name('post.home
 Route::get('/get-home', [HomeController::class, 'home_GET'])->name('get.home');
 Route::get('/get-artist-home', [HomeController::class, 'artist_home_GET'])->name('get.home_artist');
 Route::get('/get-artist-all-home', [HomeController::class, 'artist_home_all_GET'])->name('get.home_artist_all');
+
+Route::post('/post-music', [HomeController::class, 'music_POST'])->name('post.music');
+Route::get('/list-music', [HomeController::class, 'music_PAGE'])->name('page.music');
+Route::get('/delete-music/{id}', [HomeController::class, 'music_DELETE'])->name('delete.music');
+
+Route::get('/get-services', [HomeController::class, 'services_GET'])->name('get.services');
+Route::post('/post-services', [HomeController::class, 'services_POST'])->name('post.services');

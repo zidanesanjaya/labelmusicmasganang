@@ -215,5 +215,70 @@ class HomeController extends Controller
     
         return $result;
     }
+
+    public function music_POST(Request $request){
+        $title = $request->music_title;
+        $filePath = $request->file('file_music')->store('public/music');
+        $filename = basename($filePath);
+
+        $data = DB::table('music')->insert([
+            'title' => $request->music_title,
+            'file' => $filename
+        ]);
+
+        return back()->with('success','data berhasil diinsert');
+    }
+
+    public function music_PAGE(){
+        $data = DB::table('music')->get();
+
+        return view('datas.music.index',['data'=>$data]);
+    }
+
+    public function music_DELETE(Request $request, $id){
+        $filePath = DB::table('music')->where('id', $id)->value('file');
+    
+        // Delete the record from the database
+        DB::table('music')->where('id', $id)->delete();
+    
+        // Check if the file path is not empty and the file exists in storage
+        if (!empty($filePath) && Storage::exists('public/music/' . $filePath)) {
+            // Delete the file from storage
+            Storage::delete('public/music/' . $filePath);
+        }
+    
+        return back()->with('success', 'Berhasil Hapus Data');
+    }
+
+    public function services_GET(Request $request){
+        $data = DB::table('information')->where('type','services')->get();
+        $result['message'] = 'data has been loaded';
+        $result['status'] = true;
+        $result['data'] = $data;
+
+        return $result;
+    }
+
+    public function services_POST(Request $request){
+        DB::table('information')->where('title','artist_management')->update([
+            'text' => $request->artist_management,
+        ]);
+        DB::table('information')->where('title','music_publishing')->update([
+            'text' => $request->music_publishing,
+        ]);
+        DB::table('information')->where('title','content_provider')->update([
+            'text' => $request->content_provider,
+        ]);
+        DB::table('information')->where('title','digital_distribution')->update([
+            'text' => $request->digital_distribution,
+        ]);
+        DB::table('information')->where('title','brand_extension')->update([
+            'text' => $request->brand_extension,
+        ]);
+
+        $result['message'] = 'Berhasil update';
+        $result['status'] = true;
+        return $result;
+    }
 }
 
