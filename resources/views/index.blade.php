@@ -118,6 +118,7 @@
         <!-- begin::about us -->
         <div class="featured_album">
             <div class="background_image featured_background" style="background-image:url(/mixtape-master/images/featured.png)"></div>
+            <!-- <div class="about_image featured_background" style="background-image:url(/mixtape-master/images/featured.png)"></div> -->
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 offset-lg-6">
@@ -133,8 +134,8 @@
                     <div class="col-md-6">
                         <div class="featured_album_image">
                             <div class="image_overlay"></div>
-                            <div class="background_image" style="background-image:url(/mixtape-master/images/featured_album.jpg)"></div>
-                            <!-- <img src="/mixtape-master/images/featured_album.jpg" alt=""> -->
+                            <div class="about_image" style="background-image:url(/mixtape-master/images/featured_album.jpg)"></div>
+                            <!-- Gambar Ukuran 597x722 -->
                         </div>
                     </div>
 
