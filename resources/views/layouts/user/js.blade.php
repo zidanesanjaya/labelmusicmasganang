@@ -12,6 +12,7 @@
 <script src="/mixtape-master/plugins/parallax-js-master/parallax.min.js"></script>
 <script src="/mixtape-master/plugins/jPlayer/jquery.jplayer.min.js"></script>
 <script src="/mixtape-master/plugins/jPlayer/jplayer.playlist.min.js"></script>
+<script src="plugins/fit-vids/jquery.fitvids.js"></script>
 <script src="/mixtape-master/js/custom.js"></script>
 <script src="/mixtape-master/js/about.js"></script>
 <script src="/mixtape-master/js/blog.js"></script>

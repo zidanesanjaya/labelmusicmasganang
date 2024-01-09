@@ -31,6 +31,10 @@ Route::get('/artist', function () {
     return view('artist');
 });
 
+Route::get('/artist/name', function () {
+    return view('detailsArtist');
+});
+
 Route::get('/contact', function () {
     return view('contact');
 });

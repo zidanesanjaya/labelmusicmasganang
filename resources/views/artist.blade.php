@@ -85,24 +85,34 @@
             <div class="artist_container">
                 <div class="allArtist row d-flex align-items-center justify-content-around p-4 my-5">
                     <div class="listartist col-sm-3 my-2">
-                        <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
-                        <h2 class="aristName py-2">Afgan</h2>
+                        <a href="{{url ('/artist/name')}}">
+                            <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
+                            <h2 class="artistName py-2">Afgan</h2>
+                        </a>
                     </div>
                     <div class="listartist col-sm-3 my-2">
-                        <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
-                        <h2 class="aristName py-2">Armand Maulana</h2>
+                        <a href="{{url ('/artist/name')}}">
+                            <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
+                            <h2 class="artistName py-2">Armand Maulana</h2>
+                        </a>
                     </div>
                     <div class="listartist col-sm-3 my-2">
-                        <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
-                        <h2 class="aristName py-2">Cassandra Band</h2>
+                        <a href="{{url ('/artist/name')}}">
+                            <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
+                            <h2 class="artistName py-2">Cassandra Band</h2>
+                        </a>
                     </div>
                     <div class="listartist col-sm-3 my-2">
-                        <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
-                        <h2 class="aristName py-2">Gamma1</h2>
+                        <a href="{{url ('/artist/name')}}">
+                            <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
+                            <h2 class="artistName py-2">Gamma1</h2>
+                        </a>
                     </div>
                     <div class="listartist col-sm-3 my-2">
-                        <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
-                        <h2 class="aristName py-2">Afgan</h2>
+                        <a href="{{url ('/artist/name')}}">
+                            <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
+                            <h2 class="artistName py-2">Afgan</h2>
+                        </a>
                     </div>
                 </div>
             </div>
