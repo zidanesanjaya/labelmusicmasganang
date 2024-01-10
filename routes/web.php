@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,3 +74,5 @@ Route::get('/delete-music/{id}', [HomeController::class, 'music_DELETE'])->name(
 
 Route::get('/get-services', [HomeController::class, 'services_GET'])->name('get.services');
 Route::post('/post-services', [HomeController::class, 'services_POST'])->name('post.services');
+
+Route::get('send-mail', [MailController::class, 'index']);
