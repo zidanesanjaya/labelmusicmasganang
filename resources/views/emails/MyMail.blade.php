@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Music GNG</title>
+    <title>Mail Direct GNG Music</title>
 </head>
 <body>
     <h1>{{ $mailData['title'] }}</h1>
