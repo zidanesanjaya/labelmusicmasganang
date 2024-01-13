@@ -6,6 +6,7 @@
     @include('layouts.user.head')
     <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/contact.css">
     <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/contact_responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -76,12 +77,13 @@
                     <div class="col-lg-6">
                         <div class="contact_form_container">
                             <div class="contact_title">Send us a message</div>
-                            <form action="#" class="contact_form" id="contact_form">
-                                <input type="text" class="contact_input" placeholder="Full Name" required="required">
-                                <input type="text" class="contact_input" placeholder="Phone Number">
-                                <input type="email" class="contact_input" placeholder="E-mail" required="required">
-                                <textarea class="contact_input contact_textarea" placeholder="Message" required="required"></textarea>
-                                <button class="contact_button">Send Message</button>
+                            <form action="{{route('post.mail_user')}}" class="contact_form" method="post">
+                                @csrf
+                                <input type="text" class="contact_input" placeholder="Full Name" required="required" name="full_name">
+                                <input type="text" class="contact_input" placeholder="Phone Number" name="phone">
+                                <input type="email" class="contact_input" placeholder="E-mail" required="required" name="email">
+                                <textarea class="contact_input contact_textarea" placeholder="Message" required="required" name="message"></textarea>
+                                <button class="contact_button" type="submit">Send Message</button>
                             </form>
                         </div>
                     </div>

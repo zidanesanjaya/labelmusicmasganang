@@ -36,7 +36,7 @@
             <div class="col-xl-4 col-md-4 col-sm-4 col-4">
                 <h3>
                     <a class="text-light" href="#">
-                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                        <i class="mdi mdi-whatsapp fa-2x" aria-hidden="true"></i>
                     </a>
                 </h3>
             </div>
@@ -50,7 +50,7 @@
             <div class="col-xl-4 col-md-4 col-sm-4 col-4">
                 <h3>
                     <a class="text-light" href="#">
-                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        <i class="mdi mdi-facebook fa-2x" aria-hidden="true"></i>
                     </a>
                 </h3>
             </div>

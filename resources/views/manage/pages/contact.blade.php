@@ -97,23 +97,23 @@
                     '<select id="iconSelect" name="icon[]" class="form-control" onchange="updateIcon(this)">';
 
             var options = [
-                { value: 'mdi mdi-facebook fa-2x', label: 'Facebook' },
-                { value: 'mdi mdi-twitter fa-2x', label: 'Twitter' },
-                { value: 'mdi mdi-instagram fa-2x', label: 'Instagram' },
-                { value: 'mdi mdi-linkedin fa-2x', label: 'LinkedIn' },
-                { value: 'mdi mdi-pinterest fa-2x', label: 'Pinterest' },
-                { value: 'mdi mdi-snapchat fa-2x', label: 'Snapchat' },
-                { value: 'mdi mdi-youtube fa-2x', label: 'YouTube' },
-                { value: 'mdi mdi-tiktok fa-2x', label: 'TikTok' },
-                { value: 'mdi mdi-whatsapp fa-2x', label: 'WhatsApp' },
-                { value: 'mdi mdi-telegram fa-2x', label: 'Telegram' },
-                { value: 'mdi mdi-vimeo fa-2x', label: 'Vimeo' },
-                { value: 'mdi mdi-github fa-2x', label: 'GitHub' },
-                { value: 'mdi mdi-gitlab fa-2x', label: 'GitLab' },
-                { value: 'mdi mdi-bitbucket fa-2x', label: 'Bitbucket' },
-                { value: 'mdi mdi-discord fa-2x', label: 'Discord' },
-                { value: 'mdi mdi-reddit fa-2x', label: 'Reddit' },
+                { value: 'fa fa-twitter', label: 'Twitter' },
+                { value: 'fa fa-instagram', label: 'Instagram' },
+                { value: 'fa fa-linkedin', label: 'LinkedIn' },
+                { value: 'fa fa-pinterest', label: 'Pinterest' },
+                { value: 'fa fa-snapchat', label: 'Snapchat' },
+                { value: 'fa fa-youtube', label: 'YouTube' },
+                { value: 'fa fa-tiktok', label: 'TikTok' },
+                { value: 'fa fa-whatsapp', label: 'WhatsApp' },
+                { value: 'fa fa-telegram', label: 'Telegram' },
+                { value: 'fa fa-vimeo', label: 'Vimeo' },
+                { value: 'fa fa-github', label: 'GitHub' },
+                { value: 'fa fa-gitlab', label: 'GitLab' },
+                { value: 'fa fa-bitbucket', label: 'Bitbucket' },
+                { value: 'fa fa-discord', label: 'Discord' },
+                { value: 'fa fa-reddit', label: 'Reddit' },
             ];
+
 
 
             options.forEach(function(option) {
@@ -124,7 +124,7 @@
             row +=  '</select>' +
                     '</div>' +
                     '<div class="col-2 text-center d-flex align-items-center">' +
-                    '<i id="selectedIcon" class="' + data.var1 + '"></i>' +
+                    '<i id="selectedIcon" class="' + data.var1 + ' fa-2x"></i>' +
                     '</div>' +
                     '</div>' +
                     '</td>';
