@@ -112,6 +112,7 @@
                 { value: 'fa fa-bitbucket', label: 'Bitbucket' },
                 { value: 'fa fa-discord', label: 'Discord' },
                 { value: 'fa fa-reddit', label: 'Reddit' },
+                { value: 'fa fa-facebook', label: 'facebook' },
             ];
 
 

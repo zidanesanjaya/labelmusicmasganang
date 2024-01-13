@@ -21,8 +21,11 @@ class MailController extends Controller
 
         try{
             $mailData = [
-                'title' => 'Mail from ItSolutionStuff.com',
-                'body' => 'This is for testing email using smtp.'
+                'full_name' => $request->full_name,
+                'phone' => $request->phone,
+                'email' => $request->email,
+                'title' => 'Mail By User',
+                'body' => $request->message
             ];
              
             Mail::to('reynaldiluma@gmail.com')->send(new DemoMail($mailData));

@@ -33,27 +33,15 @@
     <div class="container d-flex justify-content-center pt-2">
         <div class="dropdown-divider"></div>
         <div class="row d-flex align-items-center justify-content-center text-center">
+            @foreach($social_media AS $key)
             <div class="col-xl-4 col-md-4 col-sm-4 col-4">
                 <h3>
-                    <a class="text-light" href="#">
-                        <i class="mdi mdi-whatsapp fa-2x" aria-hidden="true"></i>
+                    <a class="text-light" href="{{$key->text}}">
+                        <i class="{{$key->var1}}" aria-hidden="true"></i>
                     </a>
                 </h3>
             </div>
-            <div class="col-xl-4 col-md-4 col-sm-4 col-4">
-                <h3>
-                    <a class="text-light" href="#">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                </h3>
-            </div>
-            <div class="col-xl-4 col-md-4 col-sm-4 col-4">
-                <h3>
-                    <a class="text-light" href="#">
-                        <i class="mdi mdi-facebook fa-2x" aria-hidden="true"></i>
-                    </a>
-                </h3>
-            </div>
+            @endforeach
         </div>
     </div>
     <div class="copyrightspan row d-flex justify-content-center align-items-center pb-2">

@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
-
+use DB;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -33,6 +33,10 @@ class AppServiceProvider extends ServiceProvider
             $current_time = 'Good Night';
         }
 
+        $social_media = DB::table('information')->where('type','social_media')->where('is_show',1)->get();
+
+
         View::share('current_time', $current_time);
+        View::share('social_media', $social_media);
     }
 }

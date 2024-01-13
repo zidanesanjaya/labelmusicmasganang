@@ -10,7 +10,7 @@
     <hr>
     <div class="row p-3">
         <div class="col-lg-12 mt-4 mb-4">
-            <h4 class="mb-3">Jumbotron</h4>
+            <h4 class="mb-3">Jumbotron <span class="text-danger" style="font-size:12px">(<i>Upload Gambar Jumbotron 1920 x 1080</i>)</span></h4>
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -48,9 +48,9 @@
             <h4 class="mb-3">Artist</h4>
             <div class="row">
                <!-- Card 1 -->
-                <div class="col-md-4">
+               <div class="col-md-4">
                     <div class="card">
-                        <img src="https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png" id="artist_home1" style="max-width:400px; max-height:200px;" class="card-img-top" alt="Image 1">
+                        <img src="https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png" id="artist_home1" class="w-100 h-100 shadow-1-strong rounded"  style="max-height:300px;max-width:300px;" alt="Image 1">
                         <div class="card-body">
                             <select name="" class="form-control" id="select_gambar1">
                                 <option value=""></option>
@@ -59,12 +59,13 @@
                     </div>
                 </div>
 
+
                 <!-- Card 2 -->
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png" id="artist_home2" style="max-width:400px; max-height:200px;" class="card-img-top" alt="Image 2">
+                        <img src="https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png" id="artist_home2" class="w-100 h-100 shadow-1-strong rounded"  style="max-height:300px;max-width:300px;" alt="Image 1">
                         <div class="card-body">
-                            <select name=""  class="form-control" id="select_gambar2">
+                            <select name="" class="form-control" id="select_gambar2">
                                 <option value=""></option>
                             </select>
                         </div>
@@ -74,7 +75,7 @@
                 <!-- Card 3 -->
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png" id="artist_home3" style="max-width:400px; max-height:200px;" class="card-img-top" alt="Image 3">
+                        <img src="https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png" id="artist_home3" class="w-100 h-100 shadow-1-strong rounded"  style="max-height:300px;max-width:300px;" alt="Image 1">
                         <div class="card-body">
                             <select name="" class="form-control" id="select_gambar3">
                                 <option value=""></option>
@@ -133,14 +134,13 @@
             processData: false, 
             contentType: false, 
             success: function(response) {
-                console.log('Data posted successfully.');
+                console.log(response);
                 showToast('Data Insert Data.', 'success');
                 fileInput1.value = '';
                 fileInput2.value = '';
                 fileInput3.value = '';
             },
             error: function() {
-                console.error('Failed to post data.');
                 showToast('Gagal Insert Data.', 'error');
             }
         });
@@ -152,15 +152,16 @@
             type: 'GET',
             dataType: 'json',
             success: function(response) {
-                console.log('/storage/jumbotron/'+response.data.gambar1.text);
-                $('#jumbotron1').attr('src','/storage/jumbotron/'+response.data.gambar1.text);
-                $('#jumbotron2').attr('src','/storage/jumbotron/'+response.data.gambar2.text);
-                $('#jumbotron3').attr('src','/storage/jumbotron/'+response.data.gambar3.text);
+                $('#jumbotron1').attr('src', response.data.gambar1.text ? '/storage/jumbotron/' + response.data.gambar1.text : '/not-found.png');
+                $('#jumbotron2').attr('src', response.data.gambar2.text ? '/storage/jumbotron/' + response.data.gambar2.text : '/not-found.png');
+                $('#jumbotron3').attr('src', response.data.gambar3.text ? '/storage/jumbotron/' + response.data.gambar3.text : '/not-found.png');
             },
             error: function() {
                 showToast('Gagal Insert Data.', 'error');
             }
         });
+
+
 
         $.ajax({
             url: '/get-artist-home',
@@ -171,9 +172,9 @@
                 id_gambar2 = response.data.gambar[1].id;
                 id_gambar3 = response.data.gambar[2].id;
 
-                $('#artist_home1').attr('src','/storage/artist_images/'+response.data.gambar[0].text);
-                $('#artist_home2').attr('src','/storage/artist_images/'+response.data.gambar[1].text);
-                $('#artist_home3').attr('src','/storage/artist_images/'+response.data.gambar[2].text);
+                $('#artist_home1').attr('src','/storage/artist_images/'+response.data.gambar[0].text || '/not-found.png');
+                $('#artist_home2').attr('src','/storage/artist_images/'+response.data.gambar[1].text || '/not-found.png');
+                $('#artist_home3').attr('src','/storage/artist_images/'+response.data.gambar[2].text || '/not-found.png');
             },
             error: function() {
                 showToast('Gagal Insert Data.', 'error');

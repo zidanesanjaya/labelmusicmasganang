@@ -26,6 +26,7 @@ class Controller extends BaseController
             $current_time = 'Good Night';
         }
 
+
         View::share('current_time', $current_time);
     }
 }

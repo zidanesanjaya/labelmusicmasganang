@@ -145,6 +145,19 @@ class HomeController extends Controller
     }
 
     public function home_POST(Request $request){
+
+        // $validator = Validator::make($request->all(), [
+        //     'file1' => 'required|image|dimensions:width=1920,height=1080',
+        //     'file2' => 'required|image|dimensions:width=1920,height=1080',
+        //     'file3' => 'required|image|dimensions:width=1920,height=1080',
+        // ]);
+    
+        // if ($validator->fails()) {
+        //     $result['message'] = 'Gagal Update Data , Gambar Harus 1920 x 1080';
+        //     $result['status'] = false;
+        //     return $result;        
+        // }
+    
         if($request->file('file1')){
             $filePath1 = $request->file('file1')->store('public/jumbotron');
             $filename1 = basename($filePath1);
@@ -260,25 +273,121 @@ class HomeController extends Controller
     }
 
     public function services_POST(Request $request){
-        DB::table('information')->where('title','artist_management')->update([
+        $file1_name = null;
+        $file2_name = null;
+        $file3_name = null;
+        $file4_name = null;
+        $file5_name = null;
+
+        $data1 = [
             'text' => $request->artist_management,
-        ]);
-        DB::table('information')->where('title','music_publishing')->update([
+        ];
+
+        $data2 = [
             'text' => $request->music_publishing,
-        ]);
-        DB::table('information')->where('title','content_provider')->update([
+        ];
+
+        $data3 = [
             'text' => $request->content_provider,
-        ]);
-        DB::table('information')->where('title','digital_distribution')->update([
+        ];
+
+        $data4 = [
             'text' => $request->digital_distribution,
-        ]);
-        DB::table('information')->where('title','brand_extension')->update([
+        ];
+
+        $data5 = [
             'text' => $request->brand_extension,
-        ]);
+        ];
+
+        if ($request->hasFile('file1')) {
+            $file1 = $request->file('file1')->store('public/services');
+            $file1_name = basename($file1);
+            $data1['var1'] = $file1_name;
+        }
+
+        if ($request->hasFile('file2')) {
+            $file2 = $request->file('file2')->store('public/services');
+            $file2_name = basename($file2);
+            $data2['var1'] = $file2_name;
+        }
+
+        if ($request->hasFile('file3')) {
+            $file3 = $request->file('file3')->store('public/services');
+            $file3_name = basename($file3);
+            $data3['var1'] = $file3_name;
+        }
+
+        if ($request->hasFile('file4')) {
+            $file4 = $request->file('file4')->store('public/services');
+            $file4_name = basename($file4);
+            $data4['var1'] = $file4_name;
+        }
+
+        if ($request->hasFile('file5')) {
+            $file5 = $request->file('file5')->store('public/services');
+            $file5_name = basename($file5);
+            $data5['var1'] = $file5_name;
+        }
+
+        DB::table('information')->where('title', 'artist_management')->update($data1);
+        DB::table('information')->where('title', 'music_publishing')->update($data2);
+        DB::table('information')->where('title', 'content_provider')->update($data3);
+        DB::table('information')->where('title', 'digital_distribution')->update($data4);
+        DB::table('information')->where('title', 'brand_extension')->update($data5);
+
 
         $result['message'] = 'Berhasil update';
         $result['status'] = true;
         return $result;
+    }
+
+    public function artistPAGE(Request $request){
+        $artist_name = $request->artist_name;
+
+        if ($artist_name) {
+            $data = DB::table('information')->where('type', 'artist')->where('title', 'LIKE', "%$artist_name%")->get();
+        } else {
+            $data = DB::table('information')->where('type', 'artist')->get();
+        }        
+        return view('artist' , ['data'=>$data]);
+    }
+    public function artistDetailPAGE($id){
+        $data = DB::select("SELECT ad.* , i.title AS name , i.text AS photo FROM artists_detail AS ad LEFT JOIN information AS i ON ad.information_id = i.id WHERE i.id = $id");
+        if(sizeof($data) == 0){
+            return back();
+        }
+        return view('detailsArtist',['data'=> $data[0]]);
+    }
+    public function mailPage(){
+        $data = DB::table('mail')->orderBy('created_at','ASC')->paginate(10);
+        return view('datas.mail',['mail'=> $data]);
+    }
+
+    public function homePAGE(){
+        $data_artist = DB::table('information')->where('type', 'artist')->where('var1',1)->get();
+        $data_jumbotron = DB::table('information')->where('type', 'home')->get();
+        $about = DB::table('information')->where('type', 'about')->where('title','about')->first();
+        return view('index',['artist'=>$data_artist , 'jumbotron'=>$data_jumbotron , 'about'=>$about]);
+    }
+
+    public function contactPage(){
+        $data_contact = DB::table('information')->where('type','social_media')->get();
+        return view('contact' , ['contact'=>$data_contact]);
+    }
+    public function servicesPage(){
+        $data_services = DB::table('information')->where('type','services')->get();
+        return view('services' , ['services'=>$data_services]);
+    }
+    public function aboutPAGE(){
+        $about = DB::table('information')->where('type','about')->where('title','about')->first();
+        $visi = DB::table('information')->where('type','about')->where('title','visi')->first();
+        $misi = DB::table('information')->where('type','about')->where('title','misi')->first();
+
+        return view('about' , ['about'=>$about ,'visi'=> $visi ,'misi'=> $misi]);
+    }
+    public function deleteMail($id){
+        DB::table('mail')->where('id',$id)->delete();
+        return back()->with('success','Berhasil Hapus data');
     }
 }
 

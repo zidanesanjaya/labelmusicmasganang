@@ -13,46 +13,10 @@
     <div class="super_container">
 
         <!-- begin::Header -->
-        <header class="header">
-            <div class="header_content d-flex flex-row align-items-center justify-content-end">
-                <div class="logo"><a href="#">GNG Music Production</a></div>
-                <nav class="main_nav">
-                    <ul class="d-flex flex-row align-items-start justify-content-start">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About us</a></li>
-                        <li><a href="/services">Services</a></li>
-                        <li class="active"><a href="/artist">Artist</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </nav>
-                <div class="hamburger ml-auto">
-                    <div class="d-flex flex-column align-items-end justify-content-between">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        @include('layouts.user.menu')
         <!-- end::Header -->
 
         <!-- begin::menu -->
-        <div class="menu">
-            <div>
-                <div class="menu_overlay"></div>
-                <div class="menu_container d-flex flex-column align-items-start justify-content-center">
-                    <nav class="menu_nav">
-                        <ul class="d-flex flex-column align-items-start justify-content-start">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/about">About us</a></li>
-                            <li><a href="/services">Services</a></li>
-                            <li><a href="/artist">Artist</a></li>
-                            <li><a href="/contact">Contact Us</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
         <!-- end::menu -->
 
         <!-- Home -->
@@ -73,8 +37,8 @@
         <!-- begin::search -->
         <div class="container">
             <div class="search_container">
-                <form action="#" id="#" class="search_form">
-                    <input type="search" class="search_input" placeholder="Search">
+                <form action="{{route('page.artist')}}" class="search_form" method="get">
+                    <input type="search" name="artist_name" class="search_input" placeholder="Search">
                 </form>
             </div>
         </div>
@@ -84,36 +48,14 @@
         <div class="artist">
             <div class="artist_container">
                 <div class="allArtist row d-flex align-items-center justify-content-around p-4 my-5">
+                    @foreach($data AS $key)
                     <div class="listartist col-sm-3 my-2">
-                        <a href="{{url ('/artist/name')}}">
-                            <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
-                            <h2 class="artistName py-2">Afgan</h2>
+                        <a href="/artist-detail/{{$key->id}}">
+                            <img src="/storage/artist_images/{{$key->text}}" class="artistImage w-100 h-100 shadow-1-strong rounded" style="max-height:300px;max-width:300px;"  alt="">
+                            <h2 class="artistName py-2">{{$key->title}}</h2>
                         </a>
                     </div>
-                    <div class="listartist col-sm-3 my-2">
-                        <a href="{{url ('/artist/name')}}">
-                            <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
-                            <h2 class="artistName py-2">Armand Maulana</h2>
-                        </a>
-                    </div>
-                    <div class="listartist col-sm-3 my-2">
-                        <a href="{{url ('/artist/name')}}">
-                            <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
-                            <h2 class="artistName py-2">Cassandra Band</h2>
-                        </a>
-                    </div>
-                    <div class="listartist col-sm-3 my-2">
-                        <a href="{{url ('/artist/name')}}">
-                            <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
-                            <h2 class="artistName py-2">Gamma1</h2>
-                        </a>
-                    </div>
-                    <div class="listartist col-sm-3 my-2">
-                        <a href="{{url ('/artist/name')}}">
-                            <img class="artistImage" src="https://www.trinityproduction.com/storage/uploads/2022/01/29/afgan-1_uid_61f507807ed04.png" alt="">
-                            <h2 class="artistName py-2">Afgan</h2>
-                        </a>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

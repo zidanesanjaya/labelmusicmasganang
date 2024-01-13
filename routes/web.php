@@ -24,20 +24,16 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/services', function () {
-    return view('services');
-});
 
-Route::get('/artist', function () {
-    return view('artist');
-});
+Route::get('/', [HomeController::class, 'homePAGE'])->name('page.home');
+Route::get('/artist-detail/{id}', [HomeController::class, 'artistDetailPAGE'])->name('page.artist_detail');
+Route::get('/artist-page', [HomeController::class, 'artistPAGE'])->name('page.artist');
+Route::get('/contact-page', [HomeController::class, 'contactPAGE'])->name('page.contact');
+Route::get('/services-page', [HomeController::class, 'servicesPage'])->name('page.services');
+Route::get('/about-page', [HomeController::class, 'aboutPage'])->name('page.about');
 
 Route::get('/artist/name', function () {
     return view('detailsArtist');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
 });
 
 Route::get('/test', function () {
@@ -49,6 +45,8 @@ Route::get('/home', [HomeController::class, 'dashboard_GET']);
 Route::get('/manage-pages', [HomeController::class, 'pages_GET'])->name('manage.page');
 Route::get('/datas-music', [HomeController::class, 'music_GET'])->name('datas.music');
 Route::post('/login', [AuthController::class, 'login_POST'])->name('login');
+
+Route::get('/mail-page', [HomeController::class, 'mailPage'])->name('page.mail');
 
 Route::get('/logout-post', [AuthController::class, 'logout_POST']);
 
@@ -76,3 +74,4 @@ Route::get('/get-services', [HomeController::class, 'services_GET'])->name('get.
 Route::post('/post-services', [HomeController::class, 'services_POST'])->name('post.services');
 
 Route::post('send-mail', [MailController::class, 'mailPOST'])->name('post.mail_user');
+Route::get('delete-mail/{id}', [HomeController::class, 'deleteMail'])->name('delete.mail');

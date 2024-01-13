@@ -13,46 +13,7 @@
     <div class="super_container">
 
         <!-- begin::Header -->
-        <header class="header">
-            <div class="header_content d-flex flex-row align-items-center justify-content-end">
-                <div class="logo"><a href="#">GNG Music Production</a></div>
-                <nav class="main_nav">
-                    <ul class="d-flex flex-row align-items-start justify-content-start">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About us</a></li>
-                        <li class="active"><a href="/services">Services</a></li>
-                        <li><a href="/artist">Artist</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </nav>
-                <div class="hamburger ml-auto">
-                    <div class="d-flex flex-column align-items-end justify-content-between">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- end::Header -->
-
-        <!-- begin::menu -->
-        <div class="menu">
-            <div>
-                <div class="menu_overlay"></div>
-                <div class="menu_container d-flex flex-column align-items-start justify-content-center">
-                    <nav class="menu_nav">
-                        <ul class="d-flex flex-column align-items-start justify-content-start">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/about">About us</a></li>
-                            <li><a href="/services">Services</a></li>
-                            <li><a href="/artist">Artist</a></li>
-                            <li><a href="/contact">Contact Us</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
+        @include('layouts.user.menu')
         <!-- end::menu -->
 
         <!-- Home -->
@@ -73,136 +34,23 @@
         <!-- begin::services -->
         <div class="services">
             <div class="container">
-                <div class="row flex-row arman d-flex align-items-center justify-content-center p-4 my-5 mx-1">
-                    <div class="col-sm-12 col-lg-3 d-flex align-items-center justify-content-center">
-                        <img class="serviceimg" src="https://picsum.photos/200" alt="">
+                @foreach($services AS $data => $key)
+                    @if($data % 2 == 0)
+                        <div class="row flex-row arman d-flex align-items-center justify-content-center p-4 my-5 mx-1">
+                    @elseif($data % 2 == 1)
+                        <div class="row flex-row-reverse arman d-flex align-items-center justify-content-center p-4 my-5 mx-1">
+                    @endif
+                        <div class="col-sm-12 col-lg-3 d-flex align-items-center justify-content-center">
+                            <img class="serviceimg" src="/storage/services/{{$key->var1}}" alt="">
+                        </div>
+                        <div class="col-sm-12 col-lg-9">
+                            <h1>{{ ucwords(str_replace('_', ' ', $key->title)) }}</h1>
+                            @php
+                            echo $key->text
+                            @endphp
+                        </div>
                     </div>
-                    <div class="col-sm-12 col-lg-9">
-                        <h1>Artist Management</h1>
-                        <p class="pt-1 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto suscipit, facere aliquam inventore sapiente nisi possimus corporis dolore totam tenetur? Eveniet quae, iusto minus cupiditate, nemo corporis laboriosam sit amet doloribus explicabo quisquam repudiandae quaerat culpa? Officiis dolor incidunt impedit nemo dolore culpa dolorum laudantium! Optio esse mollitia dolorum?</p>
-                        <ul class="servicelist">
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row flex-row-reverse arman d-flex align-items-center justify-content-center p-4 my-5 mx-1">
-                    <div class="col-sm-12 col-lg-3 d-flex align-items-center justify-content-center">
-                        <img class="serviceimg" src="https://picsum.photos/200" alt="">
-                    </div>
-                    <div class="col-sm-12 col-lg-9">
-                        <h1>Music Publishing</h1>
-                        <p class="pt-1 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto suscipit, facere aliquam inventore sapiente nisi possimus corporis dolore totam tenetur? Eveniet quae, iusto minus cupiditate, nemo corporis laboriosam sit amet doloribus explicabo quisquam repudiandae quaerat culpa? Officiis dolor incidunt impedit nemo dolore culpa dolorum laudantium! Optio esse mollitia dolorum?</p>
-                        <ul class="servicelist">
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row flex-row arman d-flex align-items-center justify-content-center p-4 my-5 mx-1">
-                    <div class="col-sm-12 col-lg-3 d-flex align-items-center justify-content-center">
-                        <img class="serviceimg" src="https://picsum.photos/200" alt="">
-                    </div>
-                    <div class="col-sm-12 col-lg-9">
-                        <h1>Content Provider</h1>
-                        <p class="pt-1 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto suscipit, facere aliquam inventore sapiente nisi possimus corporis dolore totam tenetur? Eveniet quae, iusto minus cupiditate, nemo corporis laboriosam sit amet doloribus explicabo quisquam repudiandae quaerat culpa? Officiis dolor incidunt impedit nemo dolore culpa dolorum laudantium! Optio esse mollitia dolorum?</p>
-                        <ul class="servicelist">
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row flex-row-reverse arman d-flex align-items-center justify-content-center p-4 my-5 mx-1">
-                    <div class="col-sm-12 col-lg-3 d-flex align-items-center justify-content-center">
-                        <img class="serviceimg" src="https://picsum.photos/200" alt="">
-                    </div>
-                    <div class="col-sm-12 col-lg-9">
-                        <h1>Digital Distribution</h1>
-                        <p class="pt-1 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto suscipit, facere aliquam inventore sapiente nisi possimus corporis dolore totam tenetur? Eveniet quae, iusto minus cupiditate, nemo corporis laboriosam sit amet doloribus explicabo quisquam repudiandae quaerat culpa? Officiis dolor incidunt impedit nemo dolore culpa dolorum laudantium! Optio esse mollitia dolorum?</p>
-                        <ul class="servicelist">
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row flex-row arman d-flex align-items-center justify-content-center p-4 my-5 mx-1">
-                    <div class="col-sm-12 col-lg-3 d-flex align-items-center justify-content-center">
-                        <img class="serviceimg" src="https://picsum.photos/200" alt="">
-                    </div>
-                    <div class="col-sm-12 col-lg-9">
-                        <h1>Brand Extensions</h1>
-                        <p class="pt-1 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto suscipit, facere aliquam inventore sapiente nisi possimus corporis dolore totam tenetur? Eveniet quae, iusto minus cupiditate, nemo corporis laboriosam sit amet doloribus explicabo quisquam repudiandae quaerat culpa? Officiis dolor incidunt impedit nemo dolore culpa dolorum laudantium! Optio esse mollitia dolorum?</p>
-                        <ul class="servicelist">
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <!-- end::services -->

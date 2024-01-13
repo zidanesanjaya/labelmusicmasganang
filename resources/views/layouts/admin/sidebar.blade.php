@@ -28,6 +28,15 @@
             
           </li>
           
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('page.mail')}}" aria-expanded="false" aria-controls="charts">
+              <i class="menu-icon mdi mdi-mail"></i>
+              <span class="menu-title">Mail</span>
+            </a>
+            
+          </li>
+          
+
           <li class="nav-item nav-category">Authentication</li>
           <li class="nav-item">
             <a class="nav-link btn btn-danger text-white" href="/logout-post">
