@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jan 08, 2024 at 01:01 PM
+-- Host: localhost:3306
+-- Generation Time: Jan 14, 2024 at 04:40 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -20,6 +20,32 @@ SET time_zone = "+00:00";
 --
 -- Database: `label_music`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `artists_detail`
+--
+
+CREATE TABLE `artists_detail` (
+  `id` int NOT NULL,
+  `debut` varchar(255) DEFAULT NULL,
+  `debut_album` varchar(255) DEFAULT NULL,
+  `top_track` varchar(255) DEFAULT NULL,
+  `album` varchar(255) DEFAULT NULL,
+  `text` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `var1` varchar(255) DEFAULT NULL,
+  `information_id` int DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `artists_detail`
+--
+
+INSERT INTO `artists_detail` (`id`, `debut`, `debut_album`, `top_track`, `album`, `text`, `var1`, `information_id`, `created_at`, `updated_at`) VALUES
+(1, '1999s', 'Sidewinders', 'M.I.A , Afterlife , Nightmare , Second Heartbeat , Unholy Confessions', 'Nightmare , Hail To The King , City Of Evil , Waking The Fallens', 'Brian mendapatkan gitar pertamanya dari nenek dan kakeknya. Salah satu lagu pertama yang ia pelajari adalah lagu Stairway to Heaven karya Led Zeppelin. Ketika Brian duduk di kelas 6, ia sudah bisa menebak chord dari sebuah lagu hanya dengan menggunakan pendengarannya. Setelah Brian diberi gitar, dia mengatakan bahwa sekolah sudah tidak ada gunanya. Nilai bagus hanya dia peroleh sampai ia duduk di kelas 4.\r\n\r\nBrian memasuki grup musik Avenged Sevenfold sebagai gitaris ketika ia berumur 18 tahun pada akhir tahun 1999. Dia juga memainkan piano pada lagu \"Beast and the Harlot\" dan \"Sidewinder\". Dia menciptakan lagu pertamanya berjudul \"So Far Away\" untuk mengenang sahabat sekaligus drummer Avenged Sevenfold, James Owen Sullivan atau lebih dikenal dengan The Rev yang meninggal pada tanggal 28 Desember 2009.\r\n\r\nSaat ini Brian menjadi Fastest Guitarist of All Time ke-3 versi Guitar World dan menjadi Gitarist terbaik dunia urutan ke-87 versi Guitar World.s', '', 43, NULL, '2024-01-14 04:38:24');
 
 -- --------------------------------------------------------
 
@@ -45,25 +71,52 @@ CREATE TABLE `information` (
 --
 
 INSERT INTO `information` (`id`, `title`, `text`, `var1`, `var2`, `var3`, `is_show`, `type`, `created_at`, `updated_at`) VALUES
-(2, 'Instagram', NULL, 'mdi mdi-instagram fa-2x', NULL, NULL, 1, 'social_media', '2024-01-07 08:12:33', '2024-01-07 07:01:09'),
-(3, 'Facebook', NULL, 'mdi mdi-facebook fa-2x', NULL, NULL, 1, 'social_media', '2024-01-07 08:12:33', '2024-01-07 07:13:42'),
-(4, 'Whatsapp', NULL, 'mdi mdi-whatsapp fa-2x', NULL, NULL, 1, 'social_media', '2024-01-07 08:12:33', '2024-01-07 07:32:45'),
-(9, 'Linkedln', NULL, 'mdi mdi-linkedin fa-2x', NULL, NULL, 0, 'social_media', '2024-01-07 08:12:24', '2024-01-07 08:09:09'),
-(25, 'Not Found', 'notfound.png', '0', NULL, NULL, 0, 'artist', '2024-01-07 13:17:34', '2024-01-07 11:10:01'),
-(33, 'about', '<p>Ini About&nbsp; haha</p>', NULL, NULL, NULL, 1, 'about', '2024-01-07 11:43:29', '2024-01-07 11:25:54'),
+(2, 'Instagram', NULL, 'fa fa-instagram', '@ganangproduct', NULL, 1, 'social_media', '2024-01-13 09:37:51', '2024-01-07 07:01:09'),
+(3, 'Facebook', NULL, 'fa fa-facebook', 'ganangproduct', NULL, 1, 'social_media', '2024-01-13 09:37:56', '2024-01-07 07:13:42'),
+(4, 'Whatsapp', NULL, 'fa fa-whatsapp', '085123321123', NULL, 1, 'social_media', '2024-01-13 09:38:12', '2024-01-07 07:32:45'),
+(9, 'Linkedln', NULL, 'fa fa-linkedin', 'ganangmusic', NULL, 0, 'social_media', '2024-01-13 09:38:21', '2024-01-07 08:09:09'),
+(33, 'about', '<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda officia praesentium rerum earum eos, molestias deleniti ut asperiores nam hic enim. Earum laudantium voluptas accusamus, exercitationem maxime cum quod quos ab ipsum deserunt officiis et hic animi ipsa veritatis provident fugit perferendis laborum eius labore rem soluta! Nemo assumenda expedita dolores necessitatibus accusamus? Dolorem, ipsum neque. Dolorum magni laboriosam voluptatem quaerat labore ipsa nemo atque libero minus itaque autem, quos adipisci sunt repudiandae, laudantium recusandae esse consequatur corrupti alias dolores exercitationem cum. Dignissimos nam excepturi, amet natus corporis ex. Dolor sed eum eius recusandae tempore officiis. Quia natus beatae consequatur?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda officia praesentium rerum earum eos, molestias deleniti ut asperiores nam hic enim. Earum laudantium voluptas accusamus, exercitationem maxime cum quod quos ab ipsum deserunt officiis et hic animi ipsa veritatis provident fugit perferendis laborum eius labore rem soluta! Nemo assumenda expedita dolores necessitatibus accusamus? Dolorem, ipsum neque. Dolorum magni laboriosam voluptatem quaerat labore ipsa nemo atque libero minus itaque autem, quos adipisci sunt repudiandae, laudantium recusandae esse consequatur corrupti alias dolores exercitationem cum. Dignissimos nam excepturi, amet natus corporis ex. Dolor sed eum eius recusandae tempore officiis. Quia natus beatae consequatur?</p>', NULL, NULL, NULL, 1, 'about', '2024-01-13 14:26:03', '2024-01-07 11:25:54'),
 (34, 'visi', '<p>Ini Visi</p>', NULL, NULL, NULL, 1, 'about', '2024-01-07 11:35:35', '2024-01-07 11:26:00'),
 (35, 'misi', '<p>Ini Misi</p>', NULL, NULL, NULL, 1, 'about', '2024-01-07 11:35:35', '2024-01-07 11:26:05'),
-(36, 'jumbotron1', 'IO0mQBuLm81DA5AEtUDg5ozwhQwhmaWtbH8IqUUr.png', NULL, NULL, NULL, 1, 'home', '2024-01-07 12:05:29', '2024-01-07 12:00:44'),
-(37, 'jumbotron2', '9fUhPPAtDlBClneurELlxN2UGM4X9H9W5w7MmiuL.png', NULL, NULL, NULL, 1, 'home', '2024-01-07 12:05:29', '2024-01-07 12:00:54'),
-(38, 'jumbotron3', 'rYwMhq2IR9RxiwwQdmXlyH7RSFgj6lUlN0TJBUOx.png', NULL, NULL, NULL, 1, 'home', '2024-01-07 12:05:29', '2024-01-07 12:01:05'),
-(40, 'Ariel', 'CZOGDaus9cy2DZfpZSWFPr3BOnT7DxpgYDAHeuFq.jpg', '1', NULL, NULL, 1, 'artist', '2024-01-07 13:22:27', '2024-01-07 12:18:37'),
-(41, 'Rossa', '2UDcIINMXTpSDTnmGMPnEXFrqXomWBbhlaW24rPw.jpg', '1', NULL, NULL, 1, 'artist', '2024-01-07 13:22:27', '2024-01-07 12:18:46'),
-(42, 'Billie', '66Rr7YkOHgm1eUXN63nI0Y5fL7Zo64zTkOy2GBjI.jpg', '1', NULL, NULL, 1, 'artist', '2024-01-07 13:22:27', '2024-01-07 13:08:10'),
-(44, 'artist_management', '<p>fsddsg gdfg</p>', NULL, NULL, NULL, 1, 'services', '2024-01-08 12:21:33', '2024-01-08 12:11:34'),
-(45, 'music_publishing', '<p>2222</p>', NULL, NULL, NULL, 1, 'services', '2024-01-08 12:21:57', '2024-01-08 12:12:10'),
-(46, 'content_provider', '<p>33333</p>', NULL, NULL, NULL, 1, 'services', '2024-01-08 12:21:57', '2024-01-08 12:12:21'),
-(47, 'digital_distribution', '<p>4444</p>', NULL, NULL, NULL, 1, 'services', '2024-01-08 12:21:57', '2024-01-08 12:12:31'),
-(48, 'brand_extension', '<p>5555</p>', NULL, NULL, NULL, 1, 'services', '2024-01-08 12:21:57', '2024-01-08 12:12:45');
+(36, 'jumbotron1', '7SegslP2SetnYGFDn2QzQUd8QrmFGqMuPkJ8Q7cN.jpg', NULL, NULL, NULL, 1, 'home', '2024-01-13 06:57:31', '2024-01-07 12:00:44'),
+(37, 'jumbotron2', 'yiskZFjEvxdkpcsyMW4fUeBKXiIWYGVjBORsxcIs.jpg', NULL, NULL, NULL, 1, 'home', '2024-01-13 06:57:31', '2024-01-07 12:00:54'),
+(38, 'jumbotron3', '1H1ERpUyNITAifi21ZIUwEBnXpPlvniSMyHDsyrC.jpg', NULL, NULL, NULL, 1, 'home', '2024-01-13 06:57:31', '2024-01-07 12:01:05'),
+(43, 'Synyster Gatess', 'NyhArnsVgYMseSCaAURLwYF84danI4x9tyJapwrl.jpg', '1', NULL, NULL, 1, 'artist', '2024-01-14 04:38:24', '2024-01-13 07:01:45'),
+(44, 'Herman Li', 'jaPNY2Jt5ZltniuszlkeqKsLg7B0WP1MIGxUTGYR.jpg', '1', NULL, NULL, 1, 'artist', '2024-01-13 07:02:26', '2024-01-13 07:01:56'),
+(45, 'Daron', '9kx16FjHrf5cGckK4N3PluHC0a5NQMXhUPxss6Yg.jpg', '1', NULL, NULL, 1, 'artist', '2024-01-13 07:02:26', '2024-01-13 07:02:06'),
+(46, 'artist_management', '<p>Artist Management Services</p>', 'eFsCBv1Q9YEoeTgQBA7chLcklI0nFwaD7NsgOzAs.jpg', NULL, NULL, 1, 'services', '2024-01-13 12:20:07', '2024-01-13 07:08:50'),
+(47, 'music_publishing', '<p>Music Publishing Services</p>', 'hZJhIttuVRqCsCbMFz3jQIRcPuxvUYONw35yvnts.jpg', NULL, NULL, 1, 'services', '2024-01-13 12:20:07', '2024-01-13 07:08:57'),
+(48, 'content_provider', '<p>Content Provider Services</p>', 'enxD0aE9BcRljBKg3wbnNwfGLdonEQNr7na5IiFX.jpg', NULL, NULL, 1, 'services', '2024-01-13 12:20:07', '2024-01-13 07:09:16'),
+(49, 'digital_distribution', '<p>Digital Distribution Services</p>', 'LFe6TEba9eKQQQnVKrCk4IYbKTnqS5HYWV29vJjt.jpg', NULL, NULL, 1, 'services', '2024-01-13 12:20:07', '2024-01-13 07:09:25'),
+(50, 'brand_extension', '<p>Brand Extension Services</p>', 'ze4W9J0NyDs4ufJhw9we7WHdr4IHDZgqmsd1mSfB.jpg', NULL, NULL, 1, 'services', '2024-01-13 12:20:07', '2024-01-13 07:09:38'),
+(51, 'status_clicked', '0', NULL, NULL, NULL, 1, 'status', '2024-01-14 02:51:19', '2024-01-14 02:51:19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mail`
+--
+
+CREATE TABLE `mail` (
+  `id` int NOT NULL,
+  `full_name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `message` text NOT NULL,
+  `is_send` int NOT NULL,
+  `created_at` timestamp NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `mail`
+--
+
+INSERT INTO `mail` (`id`, `full_name`, `email`, `phone`, `message`, `is_send`, `created_at`, `updated_at`) VALUES
+(1, 'Reynaldi', 'reynaldihalo@gmail.com', '08124121212', 'Saya Ingin bergabung dengan label anda', 0, '2024-01-13 13:19:19', '2024-01-13 13:19:19'),
+(2, 'Zidane', 'zidane@gmail.com', '08934284328', 'Halo Saya ingin bergabung dengan label music anda , saya tertarik masuk', 0, '2024-01-13 13:26:04', '2024-01-13 13:26:04'),
+(4, 'Rama', 'rama@gmail.com', '08124121212', 'saya ingin bergabung dengan label music anda , saya harap saya bisa berkontribusi banyak dengan label music dan membuatnya semakin besar , besar harapan saya untuk bergabung dengan label anda , terima kasih', 0, '2024-01-13 13:42:25', '2024-01-13 13:42:25'),
+(5, 'Fago', 'fago@gmail.com', '08124121212', 'saya ingin bergabung dengan label music anda , saya harap saya bisa berkontribusi banyak dengan label music dan membuatnya semakin besar , besar harapan saya untuk bergabung dengan label anda , terima kasih', 1, '2024-01-13 13:50:57', '2024-01-13 13:50:57');
 
 -- --------------------------------------------------------
 
@@ -75,9 +128,16 @@ CREATE TABLE `music` (
   `id` int NOT NULL,
   `title` varchar(255) NOT NULL,
   `file` text NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `music`
+--
+
+INSERT INTO `music` (`id`, `title`, `file`, `created_at`, `updated_at`) VALUES
+(1, 'Cinta Yang Sempurna - Kangen Band', 'wlbmdFixsH854R0QWiSzqXHB5lChGPdS296DvqAR.mp3', NULL, '2024-01-13 08:57:55');
 
 -- --------------------------------------------------------
 
@@ -123,9 +183,21 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `created_at`
 --
 
 --
+-- Indexes for table `artists_detail`
+--
+ALTER TABLE `artists_detail`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `information`
 --
 ALTER TABLE `information`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mail`
+--
+ALTER TABLE `mail`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -151,16 +223,28 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `artists_detail`
+--
+ALTER TABLE `artists_detail`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `information`
 --
 ALTER TABLE `information`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+
+--
+-- AUTO_INCREMENT for table `mail`
+--
+ALTER TABLE `mail`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `music`
 --
 ALTER TABLE `music`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `services`
