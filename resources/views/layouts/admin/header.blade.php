@@ -17,7 +17,7 @@
       <div class="navbar-menu-wrapper d-flex align-items-top"> 
         <ul class="navbar-nav">
           <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-            <h5 class="welcome-text">{{$current_time}} , <span class="text-black fw-bold">{{Auth::user()->username}}</h5>
+            <!-- <h5 class="welcome-text">{{$current_time}} , <span class="text-black fw-bold">{{Auth::user()->username}}</h5> -->
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">

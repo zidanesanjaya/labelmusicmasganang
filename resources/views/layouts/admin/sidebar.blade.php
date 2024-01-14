@@ -1,4 +1,4 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+<nav class="sidebar sidebar-offcanvas pt-4" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="/home">
@@ -32,6 +32,13 @@
             <a class="nav-link" href="{{route('page.mail')}}" aria-expanded="false" aria-controls="charts">
               <i class="menu-icon mdi mdi-mail"></i>
               <span class="menu-title">Mail</span>
+            </a>
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('page.admin_detail')}}" aria-expanded="false" aria-controls="charts">
+              <i class="menu-icon mdi mdi-account"></i>
+              <span class="menu-title">Detail Artist</span>
             </a>
             
           </li>

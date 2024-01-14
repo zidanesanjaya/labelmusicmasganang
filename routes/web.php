@@ -31,6 +31,7 @@ Route::get('/artist-page', [HomeController::class, 'artistPAGE'])->name('page.ar
 Route::get('/contact-page', [HomeController::class, 'contactPAGE'])->name('page.contact');
 Route::get('/services-page', [HomeController::class, 'servicesPage'])->name('page.services');
 Route::get('/about-page', [HomeController::class, 'aboutPage'])->name('page.about');
+Route::get('/detail-artist-admin', [HomeController::class, 'detailArtistAdmin'])->name('page.admin_detail');
 
 Route::get('/artist/name', function () {
     return view('detailsArtist');
@@ -72,6 +73,7 @@ Route::get('/delete-music/{id}', [HomeController::class, 'music_DELETE'])->name(
 
 Route::get('/get-services', [HomeController::class, 'services_GET'])->name('get.services');
 Route::post('/post-services', [HomeController::class, 'services_POST'])->name('post.services');
+Route::post('/post-detail-artist', [HomeController::class, 'updateArtistDetail'])->name('post.detail_artist');
 
 Route::post('send-mail', [MailController::class, 'mailPOST'])->name('post.mail_user');
 Route::get('delete-mail/{id}', [HomeController::class, 'deleteMail'])->name('delete.mail');

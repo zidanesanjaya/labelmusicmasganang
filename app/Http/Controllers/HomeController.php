@@ -13,11 +13,14 @@ class HomeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth.session');
+        $this->middleware('auth.session')->except(['homePAGE' , 'contactPAGE' , 'artistPAGE' , 'artistDetailPAGE' , 'servicesPage' , 'aboutPage']);
     }
     
     public function dashboard_GET(){
-        return view('dashboard.index');
+        $data = DB::table('mail')->paginate(5);
+        // $summary = DB::table('information')->where('type','status')->where('title','status_clicked')->first();
+        $summary = DB::table('mail')->count();
+        return view('dashboard.index' , ['data'=>$data , 'status'=> $summary]);
     }
 
     public function pages_GET(Request $request){
@@ -101,6 +104,9 @@ class HomeController extends Controller
     } else {
         $data = DB::table('information')
             ->where('id', $request->id)
+            ->delete();
+        $artist_detail = DB::table('artists_detail')
+            ->where('information_id', $request->id)
             ->delete();
     
         $result['message'] = 'Berhasil delete';
@@ -388,6 +394,53 @@ class HomeController extends Controller
     public function deleteMail($id){
         DB::table('mail')->where('id',$id)->delete();
         return back()->with('success','Berhasil Hapus data');
+    }
+
+    public function detailArtistAdmin(){
+        $data = DB::select("SELECT i.* , ad.debut , ad.debut_album , ad.top_track , ad.album , ad.text AS deskripsi FROM information AS i LEFT JOIN artists_detail AS ad ON i.id = ad.information_id WHERE type = 'artist'");
+        return view('datas.detail_artist',['data'=> $data]);
+    }
+
+    public function updateArtistDetail(Request $request){
+        $id = $request->editId;
+        $title = $request->editTitle;
+        $editDebut = $request->editDebut;
+        $editDebutAlbum = $request->editDebutAlbum;
+        $editTopTrack = $request->editTopTrack;
+        $editAlbum = $request->editAlbum;
+        $editDeskripsi = $request->editDeskripsi;
+
+        DB::beginTransaction();
+        try{
+            
+            if($id != null && $id != ''){
+                DB::table('artists_detail')->where('information_id' , $id)->update([
+                    'debut' => $editDebut,
+                    'debut_album' => $editDebutAlbum,
+                    'top_track' => $editTopTrack,
+                    'album' => $editAlbum,
+                    'text' => $editDeskripsi,
+                ]);
+                DB::table('information')->where('id' , $id)->update([
+                    'title' => $title,
+                ]);
+            }else{
+                DB::table('artists_detail')->create([
+                    'debut' => $editDebut,
+                    'debut_album' => $editDebutAlbum,
+                    'top_track' => $editTopTrack,
+                    'album' => $editAlbum,
+                    'text' => $editDeskripsi,
+                    'information_id' => $id,
+                ]);
+            }
+    
+            DB::commit();
+            return back()->with('success','Berhasil Update Data');
+        }catch(Excpetion $e){
+            DB::rollback();
+            return back()->with('error','Gagal Update Data');
+        }
     }
 }
 

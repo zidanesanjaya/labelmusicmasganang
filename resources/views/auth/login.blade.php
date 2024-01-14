@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="/star-admin/css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="/star-admin/images/favicon.png" />
+  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.4/build/player/lottie.min.js"></script>
   <style>
     #alertNotification{
         position: absolute;
@@ -33,16 +34,15 @@
 <body>
   <div class="container-scroller">
     <div class="container-fluid page-body-wrapper full-page-wrapper">
-      <div class="content-wrapper d-flex align-items-center auth px-0">
+      <div class="content-wrapper d-flex align-items-center auth px-0" style="background-color:#000;">
         <div class="row w-100 mx-0">
           <div class="col-lg-5 mx-auto  d-none d-lg-block">
             <div class="text-left py-5 px-4 px-sm-5">
-            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-            <dotlottie-player src="https://lottie.host/f7da26a8-1e44-478a-92d3-283ee5357f30/dfCx3n8Zht.json" background="transparent" speed="1" style="width: 500px; height: 500px" direction="1" mode="normal" loop autoplay></dotlottie-player>        
+              <div style="background-color:#000;" id="lottie"></div>
             </div>
           </div>
           <div class="col-lg-7 mx-auto mt-5">
-            <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+            <div class="auth-form-light text-left py-5 px-4 px-sm-5 rounded">
               <div class="brand-logo">
                 <img src="/star-admin/images/logo.svg" alt="logo">
               </div>
@@ -61,12 +61,7 @@
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                   <div class="form-check">
-                    <label class="form-check-label text-muted">
-                      <input type="checkbox" class="form-check-input">
-                      Keep me signed in
-                    </label>
                   </div>
-                  <a href="#" class="auth-link text-black">Forgot password?</a>
                 </div>
               </form>
             </div>
@@ -101,5 +96,18 @@
   <script src="/star-admin/js/todolist.js"></script>
   <!-- endinject -->
 </body>
+
+<script>
+    var animationPath = '/star-admin/lottie/login.json';
+    var container = document.getElementById('lottie');
+
+    var animation = lottie.loadAnimation({
+    container: container,
+    renderer: 'svg',
+    loop: true, 
+    autoplay: true,
+    path: animationPath,
+  });
+</script>
 
 </html>
