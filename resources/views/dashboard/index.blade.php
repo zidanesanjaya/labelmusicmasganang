@@ -29,7 +29,7 @@
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 row rounded d-flex align-items-center" id="bg-stts" style="background: linear-gradient(180deg, #ffcf00 0%, #fff13e 35%, #ffffff 100%);">
+            <div class="col-lg-12 col-md-12 col-sm-12 row rounded d-flex align-items-center" id="bg-stts">
                 <div class="col-4">
                     <input type="hidden" id="stts" value="{{$status_current_time}}">
                     <div id="lottie"></div>
@@ -132,14 +132,19 @@
     var stts = document.getElementById('stts').value;
     var sttsElement = document.getElementById('bg-stts');
     
+    stts = 'lottie-malam';
     if(stts == 'lottie-pagi'){
         animationPath = '/star-admin/lottie/sun.json';
+        sttsElement.style.background = 'linear-gradient(180deg, #f5c700 0%, #ffed00 50%, #ffffff 100%)';
     }else if(stts == 'lottie-siang'){
         animationPath = '/star-admin/lottie/sun2.json';
+        sttsElement.style.background = 'linear-gradient(180deg, #ffed00 0%, #f58d00 100%)';
     }else if(stts == 'lottie-sore'){
         animationPath = '/star-admin/lottie/sun2.json';
+        sttsElement.style.background = 'linear-gradient(180deg, #008bf5 0%, #ff97f7 10% , #ffed00 38% , #e87200 100%)';
     }else if(stts == 'lottie-malam'){
         animationPath = '/star-admin/lottie/moon.json';
+        sttsElement.style.background = 'linear-gradient(180deg, #0088ff 0%, #000000 59%)';
         sttsElement.classList.add('text-white');
     }
 
