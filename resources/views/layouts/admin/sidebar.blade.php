@@ -21,6 +21,13 @@
             </a>
           </li> -->
           <li class="nav-item">
+            <a class="nav-link" href="{{route('page.admin_detail')}}" aria-expanded="false" aria-controls="charts">
+              <i class="menu-icon mdi mdi-account"></i>
+              <span class="menu-title">Detail Artist</span>
+            </a>
+            
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="{{route('page.music')}}" aria-expanded="false" aria-controls="charts">
               <i class="menu-icon mdi mdi-bookmark-music"></i>
               <span class="menu-title">Music</span>
@@ -35,14 +42,6 @@
             </a>
             
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('page.admin_detail')}}" aria-expanded="false" aria-controls="charts">
-              <i class="menu-icon mdi mdi-account"></i>
-              <span class="menu-title">Detail Artist</span>
-            </a>
-            
-          </li>
-          
 
           <li class="nav-item nav-category">Authentication</li>
           <li class="nav-item">
