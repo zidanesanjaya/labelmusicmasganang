@@ -44,12 +44,21 @@
             </div>
         </div>
         <hr>
+        <div class="p-4">    
+            <input type="file" class="form-control mb-3" name="about_foto" id="about_foto">
+            <div class="text-center">
+                <img id="previewFoto_about" src="#" alt="Preview" style="max-width: 800px;" class="mx-auto d-block">
+            </div>
+
+
+        </div>
+        <hr>
         <div class="col-12 mt-4 p-3">
             <h4 class="mb-3">Artist</h4>
             <div class="row">
                <!-- Card 1 -->
                <div class="col-md-4">
-                    <div class="card">
+                    <div class="card d-flex align-items-center pt-3">
                         <img src="https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png" id="artist_home1" class="w-100 h-100 shadow-1-strong rounded"  style="max-height:300px;max-width:300px;" alt="Image 1">
                         <div class="card-body">
                             <select name="" class="form-control" id="select_gambar1">
@@ -62,7 +71,7 @@
 
                 <!-- Card 2 -->
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card d-flex align-items-center pt-3">
                         <img src="https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png" id="artist_home2" class="w-100 h-100 shadow-1-strong rounded"  style="max-height:300px;max-width:300px;" alt="Image 1">
                         <div class="card-body">
                             <select name="" class="form-control" id="select_gambar2">
@@ -74,7 +83,7 @@
 
                 <!-- Card 3 -->
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card d-flex align-items-center pt-3">
                         <img src="https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png" id="artist_home3" class="w-100 h-100 shadow-1-strong rounded"  style="max-height:300px;max-width:300px;" alt="Image 1">
                         <div class="card-body">
                             <select name="" class="form-control" id="select_gambar3">
@@ -101,9 +110,12 @@
         var fileInput1 = $('#gambar1')[0];
         var fileInput2 = $('#gambar2')[0];
         var fileInput3 = $('#gambar3')[0];
+        var fileAbout = $('#about_foto')[0];
+
         var file1 = fileInput1.files[0];
         var file2 = fileInput2.files[0];
         var file3 = fileInput3.files[0];
+        var fileAbout = fileAbout.files[0];
 
         var select1 = $('#select_gambar1').val();
         var select2 = $('#select_gambar2').val();
@@ -120,6 +132,9 @@
         }
         if(file3){
             formData.append('file3', file3);
+        }
+        if(fileAbout){
+            formData.append('fileAbout', fileAbout);
         }
 
         formData.append('artist1', select1);
@@ -155,6 +170,7 @@
                 $('#jumbotron1').attr('src', response.data.gambar1.text ? '/storage/jumbotron/' + response.data.gambar1.text : '/not-found.png');
                 $('#jumbotron2').attr('src', response.data.gambar2.text ? '/storage/jumbotron/' + response.data.gambar2.text : '/not-found.png');
                 $('#jumbotron3').attr('src', response.data.gambar3.text ? '/storage/jumbotron/' + response.data.gambar3.text : '/not-found.png');
+                document.getElementById('previewFoto_about').src = '/storage/lainya/'+response.data.var1.var1;
             },
             error: function() {
                 showToast('Gagal Insert Data.', 'error');
@@ -227,6 +243,22 @@
             }
         });
     }
+
+    document.getElementById('about_foto').addEventListener('change', function (e) {
+        var inputFoto = e.target;
+        var previewFoto = document.getElementById('previewFoto_about');
+
+        if (inputFoto.files && inputFoto.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                previewFoto.src = e.target.result;
+                previewFoto.style.display = 'block';
+            };
+
+            reader.readAsDataURL(inputFoto.files[0]);
+        }
+    });
 </script>
 
 

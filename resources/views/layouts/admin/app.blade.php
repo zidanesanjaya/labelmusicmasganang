@@ -83,6 +83,8 @@
 
     CKEDITOR.replace('editor-about', {
     });
+    CKEDITOR.replace('editor-about-next', {
+    });
     CKEDITOR.replace('editor-visi', {
     });
     CKEDITOR.replace('editor-misi', {

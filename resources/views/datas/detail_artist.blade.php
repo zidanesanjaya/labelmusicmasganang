@@ -38,7 +38,7 @@
                                 <span class="badge badge-opacity-primary">{{$key->deskripsi}}</span>
                             </td>
                             <td>
-                                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModalDetailArtist" onclick="getDataDetail(`{{$key->id}}`,`{{$key->title}}`,`{{$key->debut}}`,`{{$key->debut_album}}`,`{{$key->top_track}}`,`{{$key->album}}`,`{{$key->deskripsi}}`);">
+                                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModalDetailArtist" onclick="getDataDetail(`{{$key->id}}`,`{{$key->title}}`,`{{$key->debut}}`,`{{$key->debut_album}}`,`{{$key->top_track}}`,`{{$key->album}}`,`{{$key->deskripsi}}`,`{{$key->foto}}`);">
                                     <i class="mdi mdi-pencil"></i>
                                 </button>
                             </td>
@@ -59,7 +59,7 @@
                 <h5 class="modal-title" id="editArtistModalLabel">Edit Artist</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form id="editArtistForm" method="post" action="{{route('post.detail_artist')}}">
+            <form id="editArtistForm" method="post" action="{{route('post.detail_artist')}}" enctype="multipart/form-data">
             <div class="modal-body">
                     @csrf
                     <div class="mb-3">
@@ -92,6 +92,12 @@
                         <label for="editDeskripsi" class="form-label">Deskripsi</label>
                         <textarea class="form-control" id="editDeskripsi" name="editDeskripsi"></textarea>
                     </div>
+
+                    <div class="mb-3">
+                        <label for="foto" class="form-label">Foto (kedua)</label>
+                        <input type="file" name="foto" id="uploadFoto" class="form-control">
+                    </div>
+                    <img id="previewFoto" src="#" alt="Preview" style="max-width: 200px;">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -125,7 +131,7 @@
         // Show the modal
         $('#detailsModal').modal('show');
     }
-    function getDataDetail(id , title , debut , debut_album , top_track , album , deskripsi){
+    function getDataDetail(id , title , debut , debut_album , top_track , album , deskripsi , var1){
         document.getElementById('editId').value = id;
         document.getElementById('editTitle').value = title;
         document.getElementById('editDebut').value = debut;
@@ -133,7 +139,24 @@
         document.getElementById('editTopTrack').value = top_track;
         document.getElementById('editAlbum').value = album;
         document.getElementById('editDeskripsi').value = deskripsi;
+        document.getElementById('previewFoto').src = '/storage/artist_images/'+ var1;
     }
+
+    document.getElementById('uploadFoto').addEventListener('change', function (e) {
+        var inputFoto = e.target;
+        var previewFoto = document.getElementById('previewFoto');
+
+        if (inputFoto.files && inputFoto.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                previewFoto.src = e.target.result;
+                previewFoto.style.display = 'block';
+            };
+
+            reader.readAsDataURL(inputFoto.files[0]);
+        }
+    });
 </script>
 
 @endsection

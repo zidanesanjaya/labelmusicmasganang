@@ -67,7 +67,7 @@
                     <!-- Single Content -->
                     <div class="col-lg-7 single_content_col">
                         <div class="single_content">
-                            <div class="single_image"><img src="https://picsum.photos/200" alt=""></div>
+                            <div class="single_image"><img src="/storage/artist_images/{{$data->var1}}" alt=""></div>
                         </div>
                     </div>
                 </div>

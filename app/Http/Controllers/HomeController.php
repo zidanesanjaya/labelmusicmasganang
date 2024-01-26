@@ -122,12 +122,37 @@ class HomeController extends Controller
         $about = DB::table('information')->where('title','about')->update([
             'text' => $request->about,
         ]);
+        $about = DB::table('information')->where('title','about')->update([
+            'var5' => $request->about_next,
+        ]);
         $visi = DB::table('information')->where('title','visi')->update([
             'text' => $request->visi,
         ]);
         $misi = DB::table('information')->where('title','misi')->update([
             'text' => $request->misi,
         ]);
+
+        if($request->file('var4')){
+            $var4 = $request->file('var4')->store('public/lainya');
+            $var4 = basename($var4);
+            DB::table('information')->where('title','about')->where('type','about')->update([
+                'var4' => $var4,
+            ]);
+        }
+        if($request->file('var3')){
+            $var3 = $request->file('var3')->store('public/lainya');
+            $var3 = basename($var3);
+            DB::table('information')->where('title','about')->where('type','about')->update([
+                'var3' => $var3,
+            ]);
+        }
+        if($request->file('var2')){
+            $var2 = $request->file('var2')->store('public/lainya');
+            $var2 = basename($var2);
+            DB::table('information')->where('title','about')->where('type','about')->update([
+                'var2' => $var2,
+            ]);
+        }
 
         $result['message'] = 'Berhasil update';
         $result['status'] = true;
@@ -185,6 +210,13 @@ class HomeController extends Controller
                 'text' => $filename3,
             ]);
         }
+        if($request->file('fileAbout')){
+            $filePathAbout = $request->file('fileAbout')->store('public/lainya');
+            $filenameAbout = basename($filePathAbout);
+            DB::table('information')->where('title','about')->where('type','about')->update([
+                'var1' => $filenameAbout,
+            ]);
+        }
         
         DB::table('information')->where('type','artist')->update([
             'var1' => 0,
@@ -204,10 +236,12 @@ class HomeController extends Controller
         $data['gambar1'] = DB::table('information')->where('type','home')->where('title','jumbotron1')->get();
         $data['gambar2'] = DB::table('information')->where('type','home')->where('title','jumbotron2')->get();
         $data['gambar3'] = DB::table('information')->where('type','home')->where('title','jumbotron3')->get();
+        $data['var1'] = DB::table('information')->where('type','about')->where('title','about')->get();
 
         $data['gambar1'] = $data['gambar1'][0];
         $data['gambar2'] = $data['gambar2'][0];
         $data['gambar3'] = $data['gambar3'][0];
+        $data['var1'] = $data['var1'][0];
 
         $result['message'] = 'data has been loaded';
         $result['status'] = true;
@@ -397,7 +431,7 @@ class HomeController extends Controller
     }
 
     public function detailArtistAdmin(){
-        $data = DB::select("SELECT i.* , ad.debut , ad.debut_album , ad.top_track , ad.album , ad.text AS deskripsi FROM information AS i LEFT JOIN artists_detail AS ad ON i.id = ad.information_id WHERE type = 'artist'");
+        $data = DB::select("SELECT i.* , ad.debut , ad.debut_album , ad.top_track , ad.album , ad.text AS deskripsi , ad.var1 AS foto  FROM information AS i LEFT JOIN artists_detail AS ad ON i.id = ad.information_id WHERE type = 'artist'");
         return view('datas.detail_artist',['data'=> $data]);
     }
 
@@ -412,7 +446,12 @@ class HomeController extends Controller
 
         DB::beginTransaction();
         try{
-            
+            $file1_name = null;
+            if ($request->hasFile('foto')) {
+                $file1 = $request->file('foto')->store('public/artist_images');
+                $file1_name = basename($file1);
+            }
+
             if($id != null && $id != ''){
                 DB::table('artists_detail')->where('information_id' , $id)->update([
                     'debut' => $editDebut,
@@ -420,6 +459,7 @@ class HomeController extends Controller
                     'top_track' => $editTopTrack,
                     'album' => $editAlbum,
                     'text' => $editDeskripsi,
+                    'var1' => $file1_name
                 ]);
                 DB::table('information')->where('id' , $id)->update([
                     'title' => $title,
@@ -432,6 +472,7 @@ class HomeController extends Controller
                     'album' => $editAlbum,
                     'text' => $editDeskripsi,
                     'information_id' => $id,
+                    'var1' => $file1_name
                 ]);
             }
     
