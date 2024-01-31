@@ -15,7 +15,8 @@
         <thead>
             <tr>
                 <th scope="col" style="width:200px;">title</th>
-                <th scope="col" style="width:300px;">Input</th>
+                <th scope="col" style="width:300px;">link</th>
+                <th scope="col" style="width:300px;">Name</th>
                 <th scope="col" style="width:500px;">Icon</th>
                 <th scope="col" style="width:200px;">Is Show</th>
             </tr>
@@ -90,6 +91,7 @@
             var row = '<tr>';
             row += '<td><input type="hidden" class="form-control" value="'+(data.id || '')+'" name="id[]"/>' + (data.title || '') + '</td>';
             row += '<td><input type="text" class="form-control" value="'+(data.text || '')+'" name="text[]" onchange="updateIcon(this)"/></td>';
+            row += '<td><input type="text" class="form-control" value="'+(data.var2 || '')+'" name="name_icon[]" onchange="updateIcon(this)"/></td>';
 
             row +=  '<td>' +
                     '<div class="row">' +
@@ -143,6 +145,7 @@
     function postData() {
         var dataId = $('[name="id[]"]').map(function() {return $(this).val();}).get();
         var dataText = $('[name="text[]"]').map(function() {return $(this).val();}).get();
+        var dataName = $('[name="name_icon[]"]').map(function() {return $(this).val();}).get();
         var dataIcon = $('[name="icon[]"]').map(function() {return $(this).val();}).get();
         var dataIsShow = $('[name="is_show[]"]').map(function() {
             return $(this).is(':checked') ? 1 : 0;
@@ -151,6 +154,7 @@
         var postData = {
             id: dataId,
             text: dataText,
+            name: dataName,
             icon: dataIcon,
             is_show: dataIsShow
         };

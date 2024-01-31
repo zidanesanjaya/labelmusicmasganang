@@ -17,6 +17,15 @@ class MailController extends Controller
     public function mailPOST(Request $request)
     {
 
+        $NotAllowedDomain = ['yahoo.com', 'gmail.com', 'example.com'];
+
+        foreach ($NotAllowedDomain as $domain) {
+            if (str_contains($request->email, $domain)) {
+                return back()->with('error', 'Maaf, alamat email dari domain yang Anda masukkan tidak diizinkan.');
+            }
+        }
+        
+        
         $is_send = 0;
 
         try{

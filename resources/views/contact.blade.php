@@ -17,6 +17,12 @@
         <!-- end::menu -->
 
         <!-- Home -->
+        @if(Session::has('error'))
+            <div id="alertNotification" class="alert alert-danger fixed-bottom" role="alert">
+                {{ Session::get('error') }}
+            </div>
+        @endif
+
         <div class="home">
             <div class="home_inner">
                 <div class="home_container">
@@ -72,6 +78,14 @@
             </div>
         </div>
 
+      
+        <!-- container-scroller -->
+        <!-- plugins:js -->
+        <script>
+            setTimeout(function() {
+                document.getElementById('alertNotification').style.display = 'none';
+            }, 4000);
+        </script>
         @include('layouts.user.footer')
     </div>
 

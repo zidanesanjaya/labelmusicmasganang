@@ -58,6 +58,7 @@ class HomeController extends Controller
                 ->update([
                     'text' => $request->text[$i],
                     'var1' => $request->icon[$i],
+                    'var2' => $request->name[$i],
                     'is_show' => $request->is_show[$i]
                 ]);
         }
