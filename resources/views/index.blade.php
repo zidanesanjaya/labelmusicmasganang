@@ -4,8 +4,8 @@
 <head>
     <title>Home || GNG Music Production</title>
     @include('layouts.user.head')
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/main_styles.css">
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/responsive.css">
+    <link rel="stylesheet" type="text/css" href="/public/mixtape-master/styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="/public/mixtape-master/styles/responsive.css">
 </head>
 
 <body>
@@ -47,8 +47,8 @@
 
         <!-- begin::about us -->
         <div class="featured_album">
-            <div class="background_image featured_background" style="background-image:url(/mixtape-master/images/featured.png)"></div>
-            <!-- <div class="about_image featured_background" style="background-image:url(/mixtape-master/images/featured.png)"></div> -->
+            <div class="background_image featured_background" style="background-image:url(/public/mixtape-master/images/featured.png)"></div>
+            <!-- <div class="about_image featured_background" style="background-image:url(/public/mixtape-master/images/featured.png)"></div> -->
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 offset-lg-6">
