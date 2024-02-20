@@ -4,8 +4,8 @@
 <head>
     <title>Artist || GNG Music Production</title>
     @include('layouts.user.head')
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/artist.css">
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/artist_responsive.css">
+    <link rel="stylesheet" type="text/css" href="/public/mixtape-master/styles/artist.css">
+    <link rel="stylesheet" type="text/css" href="/public/mixtape-master/styles/artist_responsive.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
         <div class="home">
             <div class="home_inner">
                 <!-- Image artist: https://unsplash.com/@yoannboyer -->
-                <!-- <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/mixtape-master/images/blog.jpg" data-speed="0.8"></div> -->
+                <!-- <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/public/mixtape-master/images/blog.jpg" data-speed="0.8"></div> -->
                 <div class="home_container">
                     <div class="home_content text-center">
                         <!-- <div class="home_subtitle">Just us</div> -->

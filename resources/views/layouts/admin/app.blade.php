@@ -7,21 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Star Admin2 </title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="/star-admin/vendors/feather/feather.css">
-  <link rel="stylesheet" href="/star-admin/vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="/star-admin/vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" href="/star-admin/vendors/typicons/typicons.css">
-  <link rel="stylesheet" href="/star-admin/vendors/simple-line-icons/css/simple-line-icons.css">
-  <link rel="stylesheet" href="/star-admin/vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="/public/star-admin/vendors/feather/feather.css">
+  <link rel="stylesheet" href="/public/star-admin/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="/public/star-admin/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="/public/star-admin/vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="/public/star-admin/vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="/public/star-admin/vendors/css/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- Plugin css for this page -->
-  <link rel="stylesheet" href="/star-admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-  <link rel="stylesheet" href="/star-admin/js/select.dataTables.min.css">
+  <link rel="stylesheet" href="/public/star-admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="/public/star-admin/js/select.dataTables.min.css">
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="/star-admin/css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="/public/star-admin/css/vertical-layout-light/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="/star-admin/images/favicon.png" />
+  <link rel="shortcut icon" href="/public/star-admin/images/favicon.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconify/iconify@3.0.0/dist/iconify.min.css">
 
   <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
@@ -132,24 +132,24 @@
     
 </script>
 
-  <script src="/star-admin/vendors/js/vendor.bundle.base.js"></script>
+  <script src="/public/star-admin/vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->
-  <script src="/star-admin/vendors/chart.js/Chart.min.js"></script>
-  <script src="/star-admin/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-  <script src="/star-admin/vendors/progressbar.js/progressbar.min.js"></script>
+  <script src="/public/star-admin/vendors/chart.js/Chart.min.js"></script>
+  <script src="/public/star-admin/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <script src="/public/star-admin/vendors/progressbar.js/progressbar.min.js"></script>
 
   <!-- End plugin js for this page -->
   <!-- inject:js -->
-  <script src="/star-admin/js/off-canvas.js"></script>
-  <script src="/star-admin/js/hoverable-collapse.js"></script>
-  <script src="/star-admin/js/template.js"></script>
-  <script src="/star-admin/js/settings.js"></script>
-  <script src="/star-admin/js/todolist.js"></script>
+  <script src="/public/star-admin/js/off-canvas.js"></script>
+  <script src="/public/star-admin/js/hoverable-collapse.js"></script>
+  <script src="/public/star-admin/js/template.js"></script>
+  <script src="/public/star-admin/js/settings.js"></script>
+  <script src="/public/star-admin/js/todolist.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="/star-admin/js/dashboard.js"></script>
-  <script src="/star-admin/js/Chart.roundedBarCharts.js"></script>
+  <script src="/public/star-admin/js/dashboard.js"></script>
+  <script src="/public/star-admin/js/Chart.roundedBarCharts.js"></script>
   <!-- End custom js for this page-->
 </body>
 

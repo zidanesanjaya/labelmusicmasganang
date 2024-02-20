@@ -4,8 +4,8 @@
 <head>
     <title>About us || GNG Music Production</title>
     @include('layouts.user.head')
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/about.css">
-    <link rel="stylesheet" type="text/css" href="/mixtape-master/styles/about_responsive.css">
+    <link rel="stylesheet" type="text/css" href="/public/mixtape-master/styles/about.css">
+    <link rel="stylesheet" type="text/css" href="/public/mixtape-master/styles/about_responsive.css">
 </head>
 
 <body>
