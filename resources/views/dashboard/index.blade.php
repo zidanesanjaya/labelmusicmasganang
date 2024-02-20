@@ -134,16 +134,16 @@
     
     stts = 'lottie-malam';
     if(stts == 'lottie-pagi'){
-        animationPath = '/star-admin/lottie/sun.json';
+        animationPath = '/public/star-admin/lottie/sun.json';
         sttsElement.style.background = 'linear-gradient(180deg, #f5c700 0%, #ffed00 50%, #ffffff 100%)';
     }else if(stts == 'lottie-siang'){
-        animationPath = '/star-admin/lottie/sun2.json';
+        animationPath = '/public/star-admin/lottie/sun2.json';
         sttsElement.style.background = 'linear-gradient(180deg, #ffed00 0%, #f58d00 100%)';
     }else if(stts == 'lottie-sore'){
-        animationPath = '/star-admin/lottie/sun2.json';
+        animationPath = '/public/star-admin/lottie/sun2.json';
         sttsElement.style.background = 'linear-gradient(180deg, #008bf5 0%, #ff97f7 10% , #ffed00 38% , #e87200 100%)';
     }else if(stts == 'lottie-malam'){
-        animationPath = '/star-admin/lottie/moon.json';
+        animationPath = '/public/star-admin/lottie/moon.json';
         sttsElement.style.background = 'linear-gradient(180deg, #0088ff 0%, #000000 59%)';
         sttsElement.classList.add('text-white');
     }
