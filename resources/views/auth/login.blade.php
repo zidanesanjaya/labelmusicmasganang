@@ -7,19 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Star Admin2 </title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="/public/star-admin/vendors/feather/feather.css">
-  <link rel="stylesheet" href="/public/star-admin/vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="/public/star-admin/vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" href="/public/star-admin/vendors/typicons/typicons.css">
-  <link rel="stylesheet" href="/public/star-admin/vendors/simple-line-icons/css/simple-line-icons.css">
-  <link rel="stylesheet" href="/public/star-admin/vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="{{ url('star-admin/vendors/feather/feather.css') }}">
+  <link rel="stylesheet" href="{{ url('star-admin/vendors/mdi/css/materialdesignicons.min.css') }}">
+  <link rel="stylesheet" href="{{ url('star-admin/vendors/ti-icons/css/themify-icons.css') }}">
+  <link rel="stylesheet" href="{{ url('star-admin/vendors/typicons/typicons.css') }}">
+  <link rel="stylesheet" href="{{ url('star-admin/vendors/simple-line-icons/css/simple-line-icons.css') }}">
+  <link rel="stylesheet" href="{{ url('star-admin/vendors/css/vendor.bundle.base.css') }}">
   <!-- endinject -->
   <!-- Plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="/public/star-admin/css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="{{ url('star-admin/css/vertical-layout-light/style.css') }}">
   <!-- endinject -->
-  <link rel="shortcut icon" href="/public/star-admin/images/favicon.png" />
+  <link rel="shortcut icon" href="{{ url('star-admin/images/favicon.png') }}" />
   <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.4/build/player/lottie.min.js"></script>
   <style>
     #alertNotification{
@@ -44,7 +44,7 @@
           <div class="col-lg-7 mx-auto mt-5">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5 rounded">
               <div class="brand-logo">
-                <img src="/public/star-admin/images/logo.svg" alt="logo">
+                <img src="{{ url('star-admin/images/logo.svg') }}" alt="logo">
               </div>
               <h4>Lets Go Grow Up With Our Music</h4>
               <h6 class="fw-light">Sign in to continue.</h6>
@@ -83,22 +83,22 @@
     }, 4000);
 </script>
 
-  <script src="/public/star-admin/vendors/js/vendor.bundle.base.js"></script>
+  <script src="{{ url('star-admin/vendors/js/vendor.bundle.base.js') }}"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->
-  <script src="/public/star-admin/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <script src="{{ url('star-admin/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
   <!-- End plugin js for this page -->
   <!-- inject:js -->
-  <script src="/public/star-admin/js/off-canvas.js"></script>
-  <script src="/public/star-admin/js/hoverable-collapse.js"></script>
-  <script src="/public/star-admin/js/template.js"></script>
-  <script src="/public/star-admin/js/settings.js"></script>
-  <script src="/public/star-admin/js/todolist.js"></script>
+  <script src="{{ url('star-admin/js/off-canvas.js') }}"></script>
+  <script src="{{ url('star-admin/js/hoverable-collapse.js') }}"></script>
+  <script src="{{ url('star-admin/js/template.js') }}"></script>
+  <script src="{{ url('star-admin/js/settings.js') }}"></script>
+  <script src="{{ url('star-admin/js/todolist.js') }}"></script>
   <!-- endinject -->
 </body>
 
 <script>
-    var animationPath = '/public/star-admin/lottie/login.json';
+    var animationPath = "{{ url('star-admin/lottie/login.json') }}";
     var container = document.getElementById('lottie');
 
     var animation = lottie.loadAnimation({

@@ -4,8 +4,8 @@
 <head>
     <title>Single Album</title>
     @include('layouts.user.head')
-    <link rel="stylesheet" type="text/css" href="/public/mixtape-master/styles/single.css">
-    <link rel="stylesheet" type="text/css" href="/public/mixtape-master/styles/single_responsive.css">
+    <link rel="stylesheet" type="text/css" href="{{ url('mixtape-master/styles/single.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('mixtape-master/styles/single_responsive.css') }}">
 </head>
 
 <body>

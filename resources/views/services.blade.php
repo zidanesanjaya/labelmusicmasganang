@@ -4,8 +4,8 @@
 <head>
     <title>Services || GNG Music Production</title>
     @include('layouts.user.head')
-    <link rel="stylesheet" type="text/css" href="/public/mixtape-master/styles/services.css">
-    <link rel="stylesheet" type="text/css" href="/public/mixtape-master/styles/services_responsive.css">
+    <link rel="stylesheet" type="text/css" href="{{ url('mixtape-master/styles/services.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('mixtape-master/styles/services_responsive.css') }}">
 </head>
 
 <body>

@@ -6,11 +6,11 @@
           </button>
         </div>
         <div>
-          <a class="navbar-brand brand-logo" href="/public/star-admin/index.html">
-            <img src="/public/star-admin/images/logo.svg" alt="logo" />
+          <a class="navbar-brand brand-logo" href="{{ url('star-admin/index.html') }}">
+            <img src="{{ url('star-admin/images/logo.svg') }}" alt="logo" />
           </a>
-          <a class="navbar-brand brand-logo-mini" href="/public/star-admin/index.html">
-            <img src="/public/star-admin/images/logo-mini.svg" alt="logo" />
+          <a class="navbar-brand brand-logo-mini" href="{{ url('star-admin/index.html') }}">
+            <img src="{{ url('star-admin/images/logo-mini.svg') }}" alt="logo" />
           </a>
         </div>
       </div>
