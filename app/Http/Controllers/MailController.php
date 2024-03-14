@@ -46,7 +46,7 @@ class MailController extends Controller
                 'body' => $request->message
             ];
 
-            Mail::to('reynaldiluma@gmail.com')->send(new DemoMail($mailData));
+            Mail::to('zidanesanjaya81@gmail.com')->send(new DemoMail($mailData));
             $is_send = 1;
         } catch (Exception $e) {
         }
