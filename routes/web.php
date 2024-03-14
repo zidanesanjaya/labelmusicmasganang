@@ -41,6 +41,9 @@ Route::get('/test', function () {
     return view('dashboard.index');
 });
 
+Route::get('/register', function () {
+    return view('auth.register');
+});
 Route::get('/login', [AuthController::class, 'login_GET'])->name('login');
 Route::get('/home', [HomeController::class, 'dashboard_GET']);
 Route::get('/manage-pages', [HomeController::class, 'pages_GET'])->name('manage.page');

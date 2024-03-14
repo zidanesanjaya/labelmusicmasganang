@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Login | GNG Music Production</title>
+  <title>Sign Up | GNG Music Production</title>
   <link rel="icon" type="image/x-icon" href="{{ url('assets/logogng.png') }}">
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{ url('star-admin/vendors/feather/feather.css') }}">
@@ -35,16 +35,10 @@
   <div class="container-scroller">
     <div class="container-fluid page-body-wrapper full-page-wrapper">
       <div class="content-wrapper d-flex align-items-center auth px-0" style="background-color:#000;">
-        <div class="row w-100 mx-0">
-          <div class="col-lg-5 mx-auto  d-none d-lg-block">
-            <div class="text-left py-5 px-4 px-sm-5">
-              <div style="background-color:#000;" id="lottie"></div>
-            </div>
-          </div>
-          <div class="col-lg-7 mx-auto mt-5">
+          <div class="w-50 mx-auto mt-5">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5 rounded">
               <h4>Lets Go Grow Up With Our Music</h4>
-              <h6 class="fw-light">Sign in to continue.</h6>
+              <h6 class="fw-light">Sign up to continue.</h6>
               <form class="pt-3" method="post" action="{{route('login')}}">
                 @csrf
                 <div class="form-group">
@@ -54,7 +48,7 @@
                   <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="password">
                 </div>
                 <div class="mt-3">
-                  <button class="btn btn-block btn-danger btn-lg font-weight-medium auth-form-btn" type="submit">SIGN IN</button>
+                  <button class="btn btn-block btn-danger btn-lg font-weight-medium auth-form-btn" type="submit">SIGN UP</button>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                   <div class="form-check">
@@ -62,11 +56,10 @@
                 </div>
               </form>
               <div class="text-center mt-4 fw-light">
-                Don't have an account? <a href="/register" class="text-primary">Create</a>
+                Already have an account? <a href="/register" class="text-primary">Log In</a>
               </div>
             </div>
           </div>
-        </div>
       </div>
       <!-- content-wrapper ends -->
     </div>
