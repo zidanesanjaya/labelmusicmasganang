@@ -6,6 +6,7 @@
     @include('layouts.user.head')
     <link rel="stylesheet" type="text/css" href="{{ url('mixtape-master/styles/main_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('mixtape-master/styles/responsive.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -18,27 +19,26 @@
 
         <!-- begin::carousel artist -->
         <div class="home">
-            <div class="home_slider_container">
+            <div class="home_slider_container w-100">
 
                 <!-- Home Slider -->
                 <div class="owl-carousel owl-theme home_slider">
 
                     <!-- Slide -->
                     @foreach($jumbotron AS $key)
-                        <div class="owl-item">
-                            <div class="background_image" style="background-image:url(/storage/jumbotron/{{$key->text}})"></div>
-                            <div class="home_container">
-                                <div class="home_container_inner d-flex flex-column align-items-center justify-content-center">
-                                    <div class="home_content text-center">
-                                        <!-- <div class="home_subtitle">New single release</div> -->
-                                        <div class="home_title">
-                                            <h1>Our Artist</h1>
-                                        </div>
-                                        <div class="home_link"><a href="#">Artist Description</a></div>
+                    <div class="owl-item">
+                        <div class="background_image img-fluid" style="background-image:url(/storage/jumbotron/{{$key->text}})"></div>
+                        <div class="home_container">
+                            <div class="home_container_inner d-flex flex-column align-items-center justify-content-center">
+                                <div class="home_content text-center">
+                                    <!-- <div class="home_subtitle">New single release</div> -->
+                                    <div class="home_title">
+                                        <h1>Our Artist</h1>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     @endforeach
                 </div>
             </div>
@@ -82,9 +82,9 @@
                                 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
                                     <div class="jp-type-playlist">
                                         <div class="jp-playlist container">
-                                        <h4 class="container">
-                                            <?php
-                                                $maxLength = 700; 
+                                            <h4 class="container">
+                                                <?php
+                                                $maxLength = 700;
                                                 $aboutText = $about->text;
                                                 if (strlen($aboutText) > $maxLength) {
                                                     $trimmedText = substr($aboutText, 0, $maxLength) . "...";
@@ -92,8 +92,8 @@
                                                 } else {
                                                     echo $aboutText;
                                                 }
-                                            ?>
-                                        </h4>
+                                                ?>
+                                            </h4>
 
                                         </div>
                                     </div>

@@ -120,9 +120,18 @@
 	{
 		display: block;
 	}
-	.contact_col
+	.disc_content_5 .disc_title
 	{
-		margin-top: 80px;
+		font-size: 75px;
+	}
+	.single_player_container
+	{
+		width: 100%;
+		left: auto;
+	}
+	.milestone
+	{
+		padding-left: 50px;
 	}
 }
 

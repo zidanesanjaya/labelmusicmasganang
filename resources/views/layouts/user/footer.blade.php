@@ -44,7 +44,7 @@
             @endforeach
         </div>
     </div>
-    <div class="copyrightspan row d-flex justify-content-center align-items-center pb-2">
+    <div class="copyrightspan row d-flex justify-content-center align-items-center pb-2 text-center">
         <span>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;<script>
