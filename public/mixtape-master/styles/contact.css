@@ -14,7 +14,14 @@
 7. Footer
 
 
+
 ******************************/
+
+.menu.active
+{
+	visibility: visible;
+	opacity: 1;
+}
 
 /***********
 1. Fonts

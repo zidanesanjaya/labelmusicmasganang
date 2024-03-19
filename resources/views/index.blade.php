@@ -6,7 +6,7 @@
     @include('layouts.user.head')
     <link rel="stylesheet" type="text/css" href="{{ url('mixtape-master/styles/main_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('mixtape-master/styles/responsive.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 
 <body>

@@ -89,6 +89,7 @@
     </div>
 
     <script src="https://kit.fontawesome.com/3f31db6242.js" crossorigin="anonymous"></script>
+    @include('layouts.user.js')
 </body>
 
 </html>
